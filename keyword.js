@@ -185,3 +185,10 @@ let und
 console.log(und); // undefined
 let und1 = undefined
 console.log(und1); // undefined
+
+//6. Symbol
+/* Symbol data tiplari odatda objectlar uchun takrorlanmas kalitlar(keys) yasab berish uchun ishlatiladi */
+let sym1 = Symbol('foo')
+let symObj = Object(sym1)
+console.log(typeof(sym1));      // symbol
+console.log(typeof(symObj));    //  Object
