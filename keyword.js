@@ -190,5 +190,48 @@ console.log(und1); // undefined
 /* Symbol data tiplari odatda objectlar uchun takrorlanmas kalitlar(keys) yasab berish uchun ishlatiladi */
 let sym1 = Symbol('foo')
 let symObj = Object(sym1)
-console.log(typeof(sym1));      // symbol
-console.log(typeof(symObj));    //  Object
+console.log(typeof (sym1));      // symbol
+console.log(typeof (symObj));    //  Object
+
+
+
+/******************* Scope ******************** */
+/* Scope asosiy 2 turga bo`linadi. Global va local scope. Scope deganda ma`lum 1 kod
+bloki tushuniladi.
+    
+    function(){},
+     for(){}, 
+     if(){}, 
+     while(){}  
+     
+    1. Global scope butun boshli JS file hisoblanadi
+    2. Local scope(block scope) - ma`lum bir funksiya, loop, if scope tushuniladi.
+    
+    Qoida:
+    1. Ota scope hech qachon bola scopeda e`lon qilingan o`zgaruvchiga ulana olmaydi
+    2. Bola scope agar biror o`zgaruvchi  o`zida e`lon qilinmagan bo`lsa, uni ota scopedan oladi
+    3. Bola scope ota scopedagi o`zgaruvchini re-assignment qila oladi.
+    4. Aka-uka scopelar hech qachon to`g`ridan to`g`ri bir biridagi o`zgaruvchini ololmaydi.
+    */
+
+/******************************************* */
+
+let meva = 'olcha'
+{
+    {
+        meva = 'shaftoli'
+    }
+}
+console.log(meva);   // shaftoli
+/******************************************* */
+let meva1 = 'olma'
+{
+    {
+        let meva2 = 'anor'
+    }
+    {
+       let meva2 = 'ananas'
+        
+    }
+    console.log(meva2); // meva2 topilmadi deb ReferenceError beradi
+}
