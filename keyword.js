@@ -90,3 +90,24 @@ let raqam = 41;
 */
 
 
+
+
+/******************************************************************* */
+/*------------ const ------------------*/
+/* const o`zi o`zgarmas degan ma`noni bildiradi. const orqali o`zgaruvchimizga 
+        o`zgarmas qiymat berib ketiladi. 
+        const decloration qilib keyin qiymat berib ketib bo`lmaydi. 
+        E`lon qilingan o`zgaruvchini qiymatini berib ketib ketish shart. 
+        uning qiymatini keyin o`zgartirib bo`lmaydi. 
+        o`zgarmas deb const bilan e`lon qilib olganimiz uchun */
+
+const s = 20;
+{
+    {
+        console.log(s);
+    }
+    s = 30;
+    /* TypeError  - Assignment to constant variable  --
+     constant bilan e`lon qilingan o`zgaruvchini qiymatini o`zgartira olmaysan degan TypeError beradi.*/
+}
+console.log(s);
