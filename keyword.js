@@ -354,13 +354,13 @@ let D = '41'
 switch (S == D) {
     case true:
         console.log("true qaytdimi");
-        // break
+    // break
     case false:
         console.log('tiplari teng emas');
-        // break
+    // break
     default:
         console.log(true);
-        // break
+    // break
 
 }
 
@@ -369,3 +369,48 @@ switch (S == D) {
     operatorlardan ajralib turadi */
 let ter = 15 == '15' ? 'qiymatlar teng' : 'qiymatlar teng emas'
 console.log(ter);   // qiymatlar teng
+
+
+/**************************************** */
+/************ for sikl operatori ***********/
+
+/* for(initialization; condition; increment/decrement){}
+    - initialization - for loopining ichida ishlatmoqchi bo`lgan variable(o`zgaruvchi) ni e`lon qilib 
+    olishimiz mumkin, let i =0
+    - condition - shart - for loopining qachon to`xtashi haqida shart kiritamiz. Qachonki shart false 
+    bo`lsagina for loopi to`xtaydi. i<10;
+    - increment/decrement - initializationga kiritilgan sonning oshishi yoki kamayishi ni kiritishimiz mumkin i++/i--;
+*/
+let f = 'salom';
+let arr = []
+// i qachonki f.length-1 ga teng bo`lgunigacha oshib boradi
+for (let i = 0; i <= f.length - 1; i++) {
+    arr.push(f[i]);
+}
+console.log(arr);   //  ['s','a','l','o','m']
+
+/*for .. of    -   javascriptda array va stringni itiratsiya qilish uchun ishlatiladi. 
+                for of regular for(initialization; condition; increment/decrement)
+                qilib bo`lmaydi. for of - doim array va stringning 1-elementidan oxirgi 
+                elementigacha ayalanadi va har bir elementini to`g`ridan-to`g`ri
+                oladi*/
+
+let letter = ['aziz', 'laziz','salim'];
+for (let el of letter){
+    console.log(el);// aziz laziz salim
+}
+
+/*for ..in      -   javascriptda for in array, string, objni itiratsiya qiladi.  
+                for ..in da regular for(initialization; condition; increment/decrement)
+                qilib bo`lmaydi. for ..in array va string bilan ishlatilganda har 
+                1 elementning indexini olib beradi. Object bilan ishlatilganda 
+                objectning property(key) ini olib beradi.*/
+let fin = ['salim','malim']
+for(let el in fin){
+    console.log(el);        // 0 1
+    console.log(fin[el]);   
+    /* fin[el] fin ning el inchi indexdagi qiymatini bilishimiz mumkin. 
+        sababi el da for in bilan aylanganimiz uchun indexni olib beradi. 
+        arrayimiz 2 uzunlikda. ya`ni el = 0-index va el = 1--index. fin[el] shu indexdagi qiymatini olib beradi.
+    */
+}
