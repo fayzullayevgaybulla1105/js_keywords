@@ -17,6 +17,7 @@ console.log(typeof (son))   // type Number
 son = "25"  // re-assignment
 console.log(typeof (son))   // type string
 
+/* globalda yoki local scopeda bir xil nom ostida var orqali o`zgaruvchini takror e`lon qilish mumkin */
 
 var son = [45, 44, 25];   // redecloration
 console.log((son[0]));  // 45
@@ -31,5 +32,4 @@ console.log((son[0]));  // 45
     }
 }
 console.log(son1);
-
 
