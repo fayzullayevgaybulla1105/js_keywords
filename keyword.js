@@ -129,7 +129,7 @@ console.log(s);
     - Null
     - Symbol
     
-2. Structural type:
+2. Structural type::
     new Array()[]
     new Object(){}
     new Map()
