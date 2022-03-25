@@ -434,7 +434,7 @@ let i = 0;
 
 do {
 
-    i = i + 1;  
+    i = i + 1;
     result = result + i;
 
 } while (i < 2);
@@ -443,3 +443,20 @@ do {
 
 // console.log(result);
 // expected result: "3"
+
+
+/******     Array ********************* */
+/*  Array - bir o`zgaruvchi nomi ostida bir nechta qiymatlarni saqlash imkonini beradi. 
+            Arrayga index orqali bog`lanish mumkin. o`z ichida constructive va primitive 
+            data typelarni saqlay oladigan container.*/
+
+let colors = ['red', 'yellow', 'blue', 'dark']
+for (let item of colors) {
+    // console.log(item); // red yellow blue dark
+}
+
+for (let item in colors) {
+    // console.log(item);           // 0 1 2 3
+    //console.log(colors[item]);    //red yellow blue dark
+}
+
