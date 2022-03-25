@@ -178,3 +178,10 @@ let t = true;
 let a = 10 + 2 > 13;
 console.log(a);     // false chunki 12 13dan katta emas
 
+//5. Undefined
+/* Undefined xuddi null qiymatiga o`xshaydi. Lekin farqli. U odatda topilmagan yoki biror
+o`zgaruvchi e`lon qilib unga qiymat berilmaganda uning qiymati undefined bo`ladi. */
+let und
+console.log(und); // undefined
+let und1 = undefined
+console.log(und1); // undefined
