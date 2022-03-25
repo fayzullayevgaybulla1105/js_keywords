@@ -315,6 +315,57 @@ console.log(x);     // 40
  */
 let X = '125'
 let Y = 125
-console.log(X==Y);  // true - qiymatlar teng.
-console.log(X===Y);  // false - qiymati va data type teng emas.
-console.log(X!==Y);  // true - qiymati va data type teng. chunki biz inkor operatorini ishlatdik
+console.log(X == Y);  // true - qiymatlar teng.
+console.log(X === Y);  // false - qiymati va data type teng emas.
+console.log(X !== Y);  // true - qiymati va data type teng. chunki biz inkor operatorini ishlatdik
+
+
+
+/***************************************************************************************** */
+/*************************** if shart operatori ******************/
+let num = 25;
+let numb1 = '25'
+/*  if(shart){
+
+    }
+    else{
+
+    }
+*/
+// shart operatoridan foydalanib sonlarning qaysi biri kichikligini tekshirib olishimiz mumkin.
+if (num > numb1) {
+    console.log('num katta emas');
+} else if (num < numb1) {
+    console.log('numb1 katta emas');
+
+} else {
+    console.log('num va numb1 teng');
+
+}
+/***************** Switch  ******************* */
+/*  switch ham if else bilan deyarli bir xil ishlaydi. Farqi shundaki. switch operatori satrma-satr bajaradi 
+    va JS rost deb hisoblagan case bandini topgach, u nafaqat ushbu case bandiga mos keladigan kodni bajaradi,
+     balki barcha keyingi case bandlarini oxirigacha bajaradi. uni oldini olish uchun togri deb topilgan caseda berilgan shartni 
+     bajarishi va bajarib bo`lgandan keyin 
+     shartni tugatishi ya`ni switchni ish holatini to`xtatishi uchun break qo`yilishi shart. 
+ */
+let S = 41
+let D = '41'
+switch (S == D) {
+    case true:
+        console.log("true qaytdimi");
+        // break
+    case false:
+        console.log('tiplari teng emas');
+        // break
+    default:
+        console.log(true);
+        // break
+
+}
+
+/************* ternary operator *************** */
+/* uchlik operatori deyiladi. bunda tekshirishi kerak bo`lgan shart, to`gri va noto`g`ri qiymatlar beriladi. ?: belgisi bilan boshqa 
+    operatorlardan ajralib turadi */
+let ter = 15 == '15' ? 'qiymatlar teng' : 'qiymatlar teng emas'
+console.log(ter);   // qiymatlar teng
