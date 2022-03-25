@@ -97,7 +97,7 @@ let raqam = 41;
 /* const o`zi o`zgarmas degan ma`noni bildiradi. const orqali o`zgaruvchimizga 
         o`zgarmas qiymat berib ketiladi. 
         const decloration qilib keyin qiymat berib ketib bo`lmaydi. 
-        E`lon qilingan o`zgaruvchini qiymatini berib ketish shart. 
+        E`lon qilingan o`zgaruvchini qiymatini berib  ketish shart. 
         uning qiymatini keyin o`zgartirib bo`lmaydi. 
         o`zgarmas deb const bilan e`lon qilib olganimiz uchun */
 
@@ -129,7 +129,7 @@ console.log(s);
     - Null
     - Symbol
     
-2. Structural type:::
+2. Structural type:
     new Array()[]
     new Object(){}
     new Map()
@@ -139,3 +139,33 @@ console.log(s);
 
     */
 
+// 1. Number
+let num1 = 123 //integer numbers
+let num2 = 123.44 //float numbers
+// Infinity - har qanday sondan katta cheksiz son. Matematik Infinity
+// Nan - xato matematik amal bajarilganda paydo bo`ladi.
+
+let inf = (1 / 0);        // infinity
+let nan = 'string' / 2     // Nan
+
+//2. BigInt 
+/*          javascript ((2**53)-1) dan katta va -((2**53)-1) dan kichik sonlarni ifodalay olmaydi. 
+                Bundan katta raqamlarni ifodalash uchun BigInt tipi qo`shilgan. 
+                Bu raqamlar oxirida n harfi qo`shish bilan ifodalanadi.
+ */
+const bigInt = 1234567890123456789012345678901234567890n
+const bigint = 78n
+
+
+//3.String 
+/*
+Javascriptda qo`shtirnoq bilan o`rab olingan bo`shliq, belgilar yoki bo`shliqlar to`plami 
+string data typega kiradi. String qiymatlarni 3 xil usulda yozish mumkin:
+*/
+let davlat = 'O\'zbekiston'
+let singleQuoted = 'assalom, ' + davlat
+let doubleQuoted = "assalom, " + davlat
+let backtickQuoted = `assalom, ${davlat}`
+
+/* double va single quoted ya`ni bittalik yoki ikkitalik qo`shtirnoqlar oddiy stringlar hisoblanadi.
+Backtick esa stringning ichida ${} belgisi orqali javascript expression kiritish mumkin.  */
