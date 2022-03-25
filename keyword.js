@@ -112,3 +112,31 @@ const s = 20;
 }
 console.log(s);
 
+
+/*Java script data tiplari  quyidagi katta guruhlarga bo`linadi
+
+1. primitive data  types
+2. structural types
+
+
+1. primitive data types:
+
+    - Number
+    - BigInt
+    - String
+    - boolean
+    - Undefined
+    - Null
+    - Symbol
+    
+2. Structural type:
+    new Array()[]
+    new Object(){}
+    new Map()
+    new Set()
+    .. har qanday new keywoardi bilan boshlangan biror class instanse(Object)
+    function(){}
+
+    */
+
+
