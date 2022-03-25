@@ -395,8 +395,8 @@ console.log(arr);   //  ['s','a','l','o','m']
                 elementigacha ayalanadi va har bir elementini to`g`ridan-to`g`ri
                 oladi*/
 
-let letter = ['aziz', 'laziz','salim'];
-for (let el of letter){
+let letter = ['aziz', 'laziz', 'salim'];
+for (let el of letter) {
     console.log(el);// aziz laziz salim
 }
 
@@ -405,12 +405,41 @@ for (let el of letter){
                 qilib bo`lmaydi. for ..in array va string bilan ishlatilganda har 
                 1 elementning indexini olib beradi. Object bilan ishlatilganda 
                 objectning property(key) ini olib beradi.*/
-let fin = ['salim','malim']
-for(let el in fin){
-    console.log(el);        // 0 1
-    console.log(fin[el]);   
+let fin = ['salim', 'malim']
+for (let el in fin) {
+    // console.log(el);        // 0 1
+    // console.log(fin[el]);
     /* fin[el] fin ning el inchi indexdagi qiymatini bilishimiz mumkin. 
         sababi el da for in bilan aylanganimiz uchun indexni olib beradi. 
         arrayimiz 2 uzunlikda. ya`ni el = 0-index va el = 1--index. fin[el] shu indexdagi qiymatini olib beradi.
     */
 }
+
+/************ while *********/
+/* While - qachonki biror shart asosida ma`lum 1 kodlar blokini qayta ishga tushirish uchun ishlatiladi. Agar shart
+            true bo`lsa cheksiz ishlayveradi. Qachonki false qiymat olgunigacha. While avval shartni 
+            tekshirib keyin kodni ishga tushiradi */
+let whil = 0
+while (whil < 8) {
+    whil++
+    // console.log(whil);  // 1 2 3 4 5 6 7 8
+}
+// console.log(whil);      //8
+
+/* do..While    -  biror shart asosida ishlaydi. Qachonki shart false bo`lgunigacha ishlaydi. 
+                    Shart boshlanishidan false bo`lsa kod bir marta ishlaydi. 
+*/
+let result = 0;
+let i = 0;
+
+do {
+
+    i = i + 1;  
+    result = result + i;
+
+} while (i < 2);
+// console.log(i);  //2
+
+
+// console.log(result);
+// expected result: "3"
