@@ -291,3 +291,30 @@ let x = '41';
 console.log(x--);   // 41
 console.log(x);     // 40
 
+/****************************************************** */
+/****************** Mantiqiy operator ********************/
+/*
+    &&      AND(VA)     x && y
+    ||      Or(yoki)    x || y
+    !       Not(emas)   !x
+*/
+
+
+/****************** JavaScript Comparison Operators (Taqqoslash operatorlari) **********/
+
+/*
+    ==      - teng(qiymati teng)
+    ===     - teng(qiymati va data type teng)
+    >       - katta
+    >=      - katta yoki teng
+    <       - kichik
+    <=      - kichik yoki teng
+    !=      - teng emas(qiymat)
+    !==      - teng emas(qiymati va data type)
+ 
+ */
+let X = '125'
+let Y = 125
+console.log(X==Y);  // true - qiymatlar teng.
+console.log(X===Y);  // false - qiymati va data type teng emas.
+console.log(X!==Y);  // true - qiymati va data type teng. chunki biz inkor operatorini ishlatdik
