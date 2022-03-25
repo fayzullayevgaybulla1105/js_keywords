@@ -230,8 +230,45 @@ let meva1 = 'olma'
         let meva2 = 'anor'
     }
     {
-       let meva2 = 'ananas'
-        
+        let meva2 = 'ananas'
+
     }
-    console.log(meva2); // meva2 topilmadi deb ReferenceError beradi
+    // console.log(meva2); // meva2 topilmadi deb ReferenceError beradi
 }
+
+
+/*********************************************************** */
+/**************** JavaScript Arithmetic Operators (+,-,/,*,**,%) ********************** */
+/*
+(+) 
+    1. Raqamlarni matematik qo`shadi.
+    2. Stringni konkatinatsiya qiladi. 'a'+1 = a1 yonma-yon qo`shish. 
+        qiymatlardan biri yoki ikkisi ham string bo`lsa konkatinatsiya qiladi. 
+    3. Primitive data type larni raqamga o`giradi
+    console.log(+true) // 1
+    console.log(+'')    // false
+    console.log(+'a')    // Nan
+
+(+) dan boshqa matematik operatorlar 2ta qiymat orasida matematik hisob-kitob qilayotganda,
+    agar ularni raqamga o`girish imkoni bo`lsa, avval ularni raqamga o`girib, keyin ularni matematik hisoblaydi, 
+    yo`qsa Nan qiymat beradi.
+    */
+console.log(true - false);      // 1
+console.log('jkl' - false);     // Nan
+console.log('' - false);        // 0
+console.log('' - true);       // -1
+
+/**************************JavaScript Assignment Operators */
+/**************************Modify and sign operators**************** */
+//    += -= *= /= %=
+let m = 20;
+m += 5;
+
+console.log(m);     //25
+m %= 2
+console.log(m);     // 1    - m ning qiymatini 2ga modi olindi natija 1 chiqdi
+
+let str = "salom ";
+let str1 = 'Baxor';
+str += str1;
+console.log(str);       // Salom Baxor
