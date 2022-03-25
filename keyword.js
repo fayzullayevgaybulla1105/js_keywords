@@ -460,3 +460,20 @@ for (let item in colors) {
     //console.log(colors[item]);    //red yellow blue dark
 }
 
+/****************** Array methods ******************/
+
+/* array.push('')        - bu method arrayning oxiridan element qo`shadi*/
+colors.push('green')
+// console.log(colors);    //   [ 'red', 'yellow', 'blue', 'dark', 'green' ] 
+
+/* array.pop()        - bu method arrayning  oxirgi elementini o`chirib yuboradi */
+colors.pop()
+// console.log(colors);       // [ 'red', 'yellow', 'blue', 'dark' ] 
+
+/* array.unshift('white) - bu method arrayning 0-indexidan element qo`shadi*/
+colors.unshift('white')
+// console.log(colors);      // [ 'white', 'red', 'yellow', 'blue', 'dark' ] 
+
+/* array.shift()        - bu method arrayning 0-indexda turgan ya`ni arrayning birinchi elementini o`chirib yuboradi */
+colors.shift()
+// console.log(colors);
