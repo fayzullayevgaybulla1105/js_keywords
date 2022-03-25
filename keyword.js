@@ -272,3 +272,22 @@ let str = "salom ";
 let str1 = 'Baxor';
 str += str1;
 console.log(str);       // Salom Baxor
+
+/****************************************************** */
+/**************** JavaScript Incrementing and Decrementing Operators ******************* */
+/*
+    Pre-increment (oldindan o`sish)     ||          ++x   ||  x ni  1 marta oshiradi, keyin x ni qaytaradi
+    Post-increment (keyingi o`sish)     ||          x++   ||  x ni qaytaradi, keyin esa x 1 marta oshiradi
+    Pre-decrement (oldindan kamayish)   ||          --x   ||  x ni  1 marta kamaytirib, keyin esa x ni qaytaradi
+    Post-dectement (kamaytirish)        ||          x--   ||  x ni qaytaradi, keyin esa x 1 marta kamaytiradi
+
+*/
+
+let inc = 5
+console.log(inc++); //5 //
+console.log(inc);   //6
+
+let x = '41';
+console.log(x--);   // 41
+console.log(x);     // 40
+
