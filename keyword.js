@@ -106,7 +106,7 @@ const s = 20;
     {
         console.log(s);
     }
-    s = 30;
+    // s = 30;
     /* TypeError  - Assignment to constant variable  --
      constant bilan e`lon qilingan o`zgaruvchini qiymatini o`zgartira olmaysan degan TypeError beradi.*/
 }
@@ -138,5 +138,4 @@ console.log(s);
     function(){}
 
     */
-
 
