@@ -162,10 +162,19 @@ const bigint = 78n
 Javascriptda qo`shtirnoq bilan o`rab olingan bo`shliq, belgilar yoki bo`shliqlar to`plami 
 string data typega kiradi. String qiymatlarni 3 xil usulda yozish mumkin:
 */
-let davlat = 'O\'zbekiston'
-let singleQuoted = 'assalom, ' + davlat
-let doubleQuoted = "assalom, " + davlat
-let backtickQuoted = `assalom, ${davlat}`
+let davlat = 'O\'zbekiston';
+let singleQuoted = 'assalom, ' + davlat;
+let doubleQuoted = "assalom, " + davlat;
+let backtickQuoted = `assalom, ${davlat}`;
 
 /* double va single quoted ya`ni bittalik yoki ikkitalik qo`shtirnoqlar oddiy stringlar hisoblanadi.
 Backtick esa stringning ichida ${} belgisi orqali javascript expression kiritish mumkin.  */
+
+//4. Boolean
+/* boolean odatda biror expressionlar ustida logic amallarni bajarganda bizga qaytadigan qiymat.
+u true va false. Bu biror ifodaning true(rost) yoki false(yolg`on) ekanligini bildiradi */
+
+let t = true;
+let a = 10 + 2 > 13;
+console.log(a);     // false chunki 12 13dan katta emas
+
