@@ -806,3 +806,32 @@ person1.logInfo.apply(tom,['doctor'])
 
 
 */
+
+function bind(context, fn) {
+    return function (...args) {
+        // console.log(args);
+        fn.apply(context, args)
+    }
+}
+
+function personLog() {
+    // console.log(`Person: ${this.name},\nAge: ${this.age},\nJob: ${this.job} `);
+}
+
+const per1 = { name: "Mexail", age: 25, job: 'doctor' }
+bind(per1, personLog)()
+
+
+/******************************** */
+/* javascriptda closures - 'zamekaniya' - ichma ich funksiyaga nisbatan aytiladi. 
+                            birinchi funksiya argumentiga qiymat berilsa, natijani chiqarish
+                            ichki funksiyada yuklatilgan bo`lsa, birinchi funksiyani qandaydir yangi o`zgaruvchiga tenglab olib. 
+                            shu o`zgaruvchini funksiya sifatida chaqirib qo`yish. ichki funksiyadagi qiymatni chiqarib beradi  */
+function calc(n) {
+    return function () {
+        console.log(1000 * n);
+    }
+}
+
+let cal = calc(5)
+cal()
