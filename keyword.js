@@ -632,14 +632,92 @@ function middle(...nums) {
 let midd = function (...nums) {
     let mid = nums.length / 2 | 0
     let store = []
-    if (!(nums.length % 2) && nums.length){
+    if (!(nums.length % 2) && nums.length) {
         store.push(nums[mid - 1])
         store.push(nums[mid])
-    }else{
+    } else {
         store.push(nums[mid])
 
     }
     return store
 }
-console.log(midd(10,20,30));
+// console.log(midd(10,20,30));
 
+function compareBy(propertyName) {
+    return function (a, b) {
+        let x = a[propertyName],
+            y = b[propertyName];
+
+        if (x > y) {
+            return 1;
+        } else if (x < y) {
+            return -1;
+        } else {
+            return 0;
+        }
+    };
+}
+
+let products = [
+    { name: 'iPhone', price: 900 },
+    { name: 'Samsung Galaxy', price: 850 },
+    { name: 'Sony Xperia', price: 700 }
+];
+// console.log('Products sorted by name:');
+products.sort(compareBy('name'));
+
+// console.table(products);
+
+// console.log('\nProducts sorted by price:');
+
+products.sort(compareBy('price'));
+// console.table(products); 
+
+
+/************** Object ******************* */
+/* object       - o`zining ichida primitive va constructive data type lar saqlay oladigan container.
+                object o`zida propert(key) va value saqlaydi. uning valuelariga propertylari orqali bog`lanish mumkin.  */
+let xx = { a: 25, b: 'salim' }
+/* objectga ulanishning 2xil usuli bor:
+                    1. dot notation
+                    2. bracket notation
+                     */
+// 1.
+// console.log(xx.a);      //  25
+// 2
+// console.log(xx['a']);   //  25
+delete (xx.a)
+// console.log(xx);        //   { b : 'salim' }
+let obj = {
+    name: "alex",
+    fullname: "smith",
+    age: 25,
+    contact: "+1124784585",
+    address: "USA"
+
+}
+let key = Object.keys(obj)
+// console.log(key);    //  [ 'name', 'fullname', 'age', 'contact', 'address' ]
+
+// objectning keyini va shu keyning valuelarini forEach orqali olish
+Object.keys(obj).forEach(key => {
+    let value = obj[key]
+    // console.log(`${key}: ${value}`);
+})
+
+// objectning valuelarini bilib olish
+let value = Object.values(obj)
+// console.log(value);  // [ 'alex', 'smith', 25, '+1124784585', 'USA' ]
+
+/* objectning key va valuelarini bilish. faqat bunda 1 massiv ichida har bir
+ key va valueni 2ta element sifatida string holatida olib beradi*/
+let entr = Object.entries(obj);
+/*
+    [
+      [ 'name', 'alex' ],
+      [ 'fullname', 'smith' ],
+      [ 'age', 25 ],
+      [ 'contact', '+1124784585' ],
+      [ 'address', 'USA' ]
+    ]
+*/
