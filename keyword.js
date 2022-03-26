@@ -498,7 +498,13 @@ colors.splice(0, 2, 'brown', 'darkblue'); //    0-indexdan 2-indexgacha bo`lgan 
 
 // console.log(colors);
 let col = colors.slice(1, colors.length)
-// console.log(col);
+// console.log(col);         // ['darkblue', <1 bo`sh joy>, 'dark']
 let ar1 = [1, 2, 4, 5, 6, 'salim', 'nodir', 'alex']
 let sp = ar1.slice(-5, 6)    // -5 inchi elementidan o`qi 6-indexdagi elementigacha nusxa ol.  
-console.log(sp);            // [ 5, 6, 'salim']
+// console.log(sp);            // [ 5, 6, 'salim']
+
+
+/* array.concat(qo`shmoqchi bo`lgan arrayimizni kiritamiz)      - bu method array1 bilan array2 ni concatinatsiya 
+                                                                qiladi yani bir butun arrayga aylantirib beradi */
+let con = col.concat(sp)
+// console.log(con);        // ['darkblue', <1 bo`sh joy>, 'dark', 5, 6, 'salim']
