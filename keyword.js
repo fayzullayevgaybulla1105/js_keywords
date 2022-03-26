@@ -359,7 +359,7 @@ switch (S == D) {
     // console.log('tiplari teng emas');
     // break
     default:
-        // console.log(true);
+    // console.log(true);
     // break
 
 }
@@ -526,6 +526,22 @@ let jo = con.join("-")
                                         start-bu boshlanish end - tugash yani  startdagi indexdan end ga kiritilgan indexgacha 
                                         bo`lgan elementlarni o`zgaritirib beradi. faqat startni o`zini ham berishimiz mumkin.*/
 
-let animals = ['elephant', 'dog', 'cat', 'monkey', 'mouse']
+let animals = ['elephant', 'dog', 'cat', 'Monkey', '1mouse']
 let fil = animals.fill('crocodile', 3)
 // console.log(fil);           //['elephant', 'dog', 'cat', 'crocodile', 'crocodile']  - 3-indexdan boshlab qolgan indexdagi elementlarni ham crocodile ga o`zgartiradi tugash indexni kiritmaganimiz uchun
+
+
+/* array.includes('')   -   ushbu method boolean true va false qaytaradi. unda kiritilgan element animals degan arrayning ichida bo`lsa true aks holda false qiymat qaytaradi. */
+let includ = animals.includes('dog')    // animalsning ichiga 'dog' degan element bormi?
+// console.log(includ);         // true
+
+/* array.sort()     - sort methodi tartiblaydi. katta-kichik harflarni ascii table bo`yicha. raqamlarni ham. 
+                    'Salom' va 'salom' bo`lsa birinchi bosh harf bilan yozilganini oladi. 
+                    lekin 'Salom' va '1salom' bo`lsa birinchi boshida raqam kiritilgan 
+                    stringni yozib davomidan 'Salom' ni qo`yib beradi */
+let aral = ['salom', 'Salom', '1salomat']
+// console.log(aral.sort());           //['1salomat', 'Salom', 'salom']
+
+/* array.reverse()      -- bu method arrayning ichidagi elementlarning o`rnini o`zgartiradi. oxirgi element birinchi holatga,birinchi esa oxirgi holatga o`tadi */
+let rev = ['12',3,4,85,'salim', 'saloh', 5,7,8]
+// console.log(rev.reverse());          // [ 8, 7, 5, 'saloh', 'salim', 85, 4, 3, '12' ]
