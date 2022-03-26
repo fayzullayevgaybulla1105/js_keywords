@@ -755,5 +755,45 @@ const car = {
 
 let arra = ["red", 'blue', 'dark', 'brown']
 // console.log('arra ning 0 index mavjudmi? : ',0 in arra);
-console.log(arra instanceof Array);
-console.log(arra instanceof Object);
+// console.log(arra instanceof Array);
+// console.log(arra instanceof Object);
+
+let counter = {
+    count: 0,
+    next: function () {
+        return ++this.count;
+    },
+}
+// console.log(counter.next())
+let brand = counter.next.bind(counter)
+// console.log(brand());
+
+
+function hello() {
+    console.log('Hello', this);
+}
+
+const person = {
+    name: "G'aybulla",
+    age: 28,
+    sayHello: hello,
+    // sayHelloWindow: hello.bind(document),   
+    /*bind uchun document kiritganimda Elenaning barcha ma`lumotlarini browser consolega chiqardi*/
+    logInfo: function (job, phone) {
+        console.group(`${this.name} info:`)
+        console.log(`Name is ${this.name}`);
+        console.log(`Age is ${this.age}`);
+        console.log(`Job is ${job}`);
+        console.log(`Phone is ${phone}`);
+        console.groupEnd()
+    }
+}
+
+
+let lena = {
+    name: "Elena",
+    age: 21
+}
+// person.logInfo.bind(lena, 'frontend-developer', '1245487')()
+person.logInfo.call(lena, 'frontend-developer', '1245487')
+// person.logInfo.apply(lena, ['frontend-developer', '1245487'])
