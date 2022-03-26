@@ -566,3 +566,15 @@ try {
 } finally {
     // console.log({ result1 }); // {result1 : 0}
 }
+
+/* continue     - davom etish.  */
+let a12 = 10
+let sum = 0
+for(let i=0; i< a12; i++){
+    if(i%2==0){             /* i ning 2 ga modi olinganda qiymat 0 ga teng bo`lganlarini sum ga qo`shib tenglaymiz */
+        sum+=i             // 2 + 4 + 6 + 8
+        continue
+    }
+    // console.log(i);     //  1 3 5 7 9
+}
+// console.log(sum);           // 20
