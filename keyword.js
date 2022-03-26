@@ -9,18 +9,18 @@
 var son1 = 50;  // initialization
 var son;    // decloration
 
-console.log(typeof (son))   // undefined
+// console.log(typeof (son))   // undefined
 
 son = 20;   // assignment
-console.log(typeof (son))   // type Number
+// console.log(typeof (son))   // type Number
 
 son = "25"  // re-assignment
-console.log(typeof (son))   // type string
+// console.log(typeof (son))   // type string
 
 /* globalda yoki local scopeda bir xil nom ostida var orqali o`zgaruvchini takror e`lon qilish mumkin */
 
 var son = [45, 44, 25];   // redecloration
-console.log((son[0]));  // 45
+// console.log((son[0]));  // 45
 
 /* var orqali e`lon qilingan o`zgaruvchi global yoki local scopelarga amal qilmaydi. 
     globalda var orqali e`lon qilingan o`zgaruvchi localda ham shu nom bilan var orqali 
@@ -31,7 +31,7 @@ console.log((son[0]));  // 45
         var son1 = 35;
     }
 }
-console.log(son1);
+// console.log(son1);
 
 
 /******************************************************************* */
@@ -44,13 +44,13 @@ console.log(son1);
 let son2 = 50;  // initialization
 let son3;    // decloration
 
-console.log(typeof (son3))   // undefined
+// console.log(typeof (son3))   // undefined
 
 son3 = 20;   // assignment
-console.log(typeof (son3))   // type Number
+// console.log(typeof (son3))   // type Number
 
 son3 = "25"  // re-assignment
-console.log(typeof (son3))   // type string
+// console.log(typeof (son3))   // type string
 
 
 
@@ -70,19 +70,19 @@ son3 = '25'
             //local
 
             let son3 = '123456'
-            console.log(son3);
+            // console.log(son3);
         }
         son3 = 41
-        console.log(son3);  //41
+        // console.log(son3);  //41
     }
 
-    console.log(son3);  // 41
+    // console.log(son3);  // 41
 
     son3 = 'olma'
-    console.log(son3);  // olma
+    // console.log(son3);  // olma
 
 }
-console.log(son3);  //olma
+// console.log(son3);  //olma
 
 /* let orqali bir o`zgaruvchini globalda yoki local scopeda orasida bir xil nom ostida e`lon qilib bo`lmaydi. 
 let raqam = 25;
@@ -104,13 +104,13 @@ let raqam = 41;
 const s = 20;
 {
     {
-        console.log(s);
+        // console.log(s);
     }
     // s = 30;
     /* TypeError  - Assignment to constant variable  --
      constant bilan e`lon qilingan o`zgaruvchini qiymatini o`zgartira olmaysan degan TypeError beradi.*/
 }
-console.log(s);
+// console.log(s);
 
 
 /*Java script data tiplari  quyidagi katta guruhlarga bo`linadi
@@ -176,22 +176,22 @@ u true va false. Bu biror ifodaning true(rost) yoki false(yolg`on) ekanligini bi
 
 let t = true;
 let a = 10 + 2 > 13;
-console.log(a);     // false chunki 12 13dan katta emas
+// console.log(a);     // false chunki 12 13dan katta emas
 
 //5. Undefined
 /* Undefined xuddi null qiymatiga o`xshaydi. Lekin farqli. U odatda topilmagan yoki biror
 o`zgaruvchi e`lon qilib unga qiymat berilmaganda uning qiymati undefined bo`ladi. */
 let und
-console.log(und); // undefined
+// console.log(und); // undefined
 let und1 = undefined
-console.log(und1); // undefined
+// console.log(und1); // undefined
 
 //6. Symbol
 /* Symbol data tiplari odatda objectlar uchun takrorlanmas kalitlar(keys) yasab berish uchun ishlatiladi */
 let sym1 = Symbol('foo')
 let symObj = Object(sym1)
-console.log(typeof (sym1));      // symbol
-console.log(typeof (symObj));    //  Object
+// console.log(typeof (sym1));      // symbol
+// console.log(typeof (symObj));    //  Object
 
 
 
@@ -222,7 +222,7 @@ let meva = 'olcha'
         meva = 'shaftoli'
     }
 }
-console.log(meva);   // shaftoli
+// console.log(meva);   // shaftoli
 /******************************************* */
 let meva1 = 'olma'
 {
@@ -253,10 +253,10 @@ let meva1 = 'olma'
     agar ularni raqamga o`girish imkoni bo`lsa, avval ularni raqamga o`girib, keyin ularni matematik hisoblaydi, 
     yo`qsa Nan qiymat beradi.
     */
-console.log(true - false);      // 1
-console.log('jkl' - false);     // Nan
-console.log('' - false);        // 0
-console.log('' - true);       // -1
+// console.log(true - false);      // 1
+// console.log('jkl' - false);     // Nan
+// console.log('' - false);        // 0
+// console.log('' - true);       // -1
 
 /**************************JavaScript Assignment Operators */
 /**************************Modify and sign operators**************** */
@@ -264,14 +264,14 @@ console.log('' - true);       // -1
 let m = 20;
 m += 5;
 
-console.log(m);     //25
+// console.log(m);     //25
 m %= 2
-console.log(m);     // 1    - m ning qiymatini 2ga modi olindi natija 1 chiqdi
+// console.log(m);     // 1    - m ning qiymatini 2ga modi olindi natija 1 chiqdi
 
 let str = "salom ";
 let str1 = 'Baxor';
 str += str1;
-console.log(str);       // Salom Baxor
+// console.log(str);       // Salom Baxor
 
 /****************************************************** */
 /**************** JavaScript Incrementing and Decrementing Operators ******************* */
@@ -284,12 +284,12 @@ console.log(str);       // Salom Baxor
 */
 
 let inc = 5
-console.log(inc++); //5 //
-console.log(inc);   //6
+// console.log(inc++); //5 //
+// console.log(inc);   //6
 
 let x = '41';
-console.log(x--);   // 41
-console.log(x);     // 40
+// console.log(x--);   // 41
+// console.log(x);     // 40
 
 /****************************************************** */
 /****************** Mantiqiy operator ********************/
@@ -315,9 +315,9 @@ console.log(x);     // 40
  */
 let X = '125'
 let Y = 125
-console.log(X == Y);  // true - qiymatlar teng.
-console.log(X === Y);  // false - qiymati va data type teng emas.
-console.log(X !== Y);  // true - qiymati va data type teng. chunki biz inkor operatorini ishlatdik
+// console.log(X == Y);  // true - qiymatlar teng.
+// console.log(X === Y);  // false - qiymati va data type teng emas.
+// console.log(X !== Y);  // true - qiymati va data type teng. chunki biz inkor operatorini ishlatdik
 
 
 
@@ -334,12 +334,12 @@ let numb1 = '25'
 */
 // shart operatoridan foydalanib sonlarning qaysi biri kichikligini tekshirib olishimiz mumkin.
 if (num > numb1) {
-    console.log('num katta emas');
+    // console.log('num katta emas');
 } else if (num < numb1) {
-    console.log('numb1 katta emas');
+    // console.log('numb1 katta emas');
 
 } else {
-    console.log('num va numb1 teng');
+    // console.log('num va numb1 teng');
 
 }
 /***************** Switch  ******************* */
@@ -353,10 +353,10 @@ let S = 41
 let D = '41'
 switch (S == D) {
     case true:
-        console.log("true qaytdimi");
+        // console.log("true qaytdimi");
     // break
     case false:
-        console.log('tiplari teng emas');
+        // console.log('tiplari teng emas');
     // break
     default:
         console.log(true);
@@ -368,7 +368,7 @@ switch (S == D) {
 /* uchlik operatori deyiladi. bunda tekshirishi kerak bo`lgan shart, to`gri va noto`g`ri qiymatlar beriladi. ?: belgisi bilan boshqa 
     operatorlardan ajralib turadi */
 let ter = 15 == '15' ? 'qiymatlar teng' : 'qiymatlar teng emas'
-console.log(ter);   // qiymatlar teng
+// console.log(ter);   // qiymatlar teng
 
 
 /**************************************** */
@@ -387,7 +387,7 @@ let arr = []
 for (let i = 0; i <= f.length - 1; i++) {
     arr.push(f[i]);
 }
-console.log(arr);   //  ['s','a','l','o','m']
+// console.log(arr);   //  ['s','a','l','o','m']
 
 /*for .. of    -   javascriptda array va stringni itiratsiya qilish uchun ishlatiladi. 
                 for of regular for(initialization; condition; increment/decrement)
@@ -397,7 +397,7 @@ console.log(arr);   //  ['s','a','l','o','m']
 
 let letter = ['aziz', 'laziz', 'salim'];
 for (let el of letter) {
-    console.log(el);// aziz laziz salim
+    // console.log(el);// aziz laziz salim
 }
 
 /*for ..in      -   javascriptda for in array, string, objni itiratsiya qiladi.  
@@ -514,7 +514,8 @@ let con = col.concat(sp)
                         belgi qo`yishimiz mumkin,  elementlar orasiga shu belgilarni qo`yib beradi, 
                         faqat kiritmoqchi bo`lgan belgimizni ham qavsni ichida stringga olib kiritishimiz kerak.
                         aks holda o`zi comma(,) vergul qo`yib chiqaradi.*/
-console.log(con);
+// console.log(con);
 let jo = con.join("-")
 // console.log(typeof(jo));     // string
-console.log(jo);             // darkblue--dark-5-6-salim        // darkbluedan keyin 2ta - belgi keldi bo`sh joyni o`rniga ham - qo`yib beradi
+// console.log(jo);             // darkblue--dark-5-6-salim        // darkbluedan keyin 2ta - belgi keldi bo`sh joyni o`rniga ham - qo`yib beradi
+
