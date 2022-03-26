@@ -570,11 +570,76 @@ try {
 /* continue     - davom etish.  */
 let a12 = 10
 let sum = 0
-for(let i=0; i< a12; i++){
-    if(i%2==0){             /* i ning 2 ga modi olinganda qiymat 0 ga teng bo`lganlarini sum ga qo`shib tenglaymiz */
-        sum+=i             // 2 + 4 + 6 + 8
+for (let i = 0; i < a12; i++) {
+    if (i % 2 == 0) {             /* i ning 2 ga modi olinganda qiymat 0 ga teng bo`lganlarini sum ga qo`shib tenglaymiz */
+        sum += i             // 2 + 4 + 6 + 8
         continue
     }
     // console.log(i);     //  1 3 5 7 9
 }
 // console.log(sum);           // 20
+
+
+/* function     -   ma`lum bir vazifani bajaradigan kodlar bloki funksiya deyiladi. funksiya ichidadi kod
+                    qachonki funksiya chaqirilmagunigacha hech qachon ishga tushmaydi. funksiya o`zida 
+                    argument qabul qiladi. funksiya ma`lum bir vazifani bajarib bo`lgach, oxirgi natijani
+                    return keywoardi orqali chiqaradi. funksiya chaqirilganda undan qaytadigan qiymat, return keywoardi
+                    orqali berilgan qiymatga teng. return qo`yilmasa undefined beradi.
+                     
+                    Agar objectning biror property(key) ida funksiya saqlansa u method deyiladi.
+                    let son = {func:function(){}}
+                    */
+
+function mult(a, b) {
+    return a * b
+}
+let summary = mult(2, 3)
+// console.log('sum: ', summary);   // sum: 6
+
+function compare(a, b) {
+    if (a > b) {
+        return -1;
+    } else if (a < b) {
+        return 1
+    } else {
+        return "sonlar teng"
+    }
+    return 0
+}
+// console.log(compare(2, 5))       // 1
+
+/* anonymus function        - (function(){})() - self inkoved -function. O`zini o`zi ishga tushiradigan funksiya. Uni chaqirish shart emas.
+                            U faqat 1 marta ishga tushadi. Undan qaytadigan qiymatni o`zgaruvchiga olish mumkin. 
+    
+    funksiya turlari    -   function decloration     - function(){}
+                            function expression      - let sum = function(){}
+                            */
+
+
+
+function middle(...nums) {
+    let s = nums.length / 2 | 0
+    if (nums.length % 2 == 0) {
+        return [nums[s - 1], nums[s]]
+    } else {
+        return [nums[s]]
+
+    }
+}
+// console.log(middle(10,20,30));       // [20]
+
+
+let midd = function (...nums) {
+    let mid = nums.length / 2 | 0
+    let store = []
+    if (!(nums.length % 2) && nums.length){
+        store.push(nums[mid - 1])
+        store.push(nums[mid])
+    }else{
+        store.push(nums[mid])
+
+    }
+    return store
+}
+console.log(midd(10,20,30));
+
