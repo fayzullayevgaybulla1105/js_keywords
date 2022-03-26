@@ -543,5 +543,26 @@ let aral = ['salom', 'Salom', '1salomat']
 // console.log(aral.sort());           //['1salomat', 'Salom', 'salom']
 
 /* array.reverse()      -- bu method arrayning ichidagi elementlarning o`rnini o`zgartiradi. oxirgi element birinchi holatga,birinchi esa oxirgi holatga o`tadi */
-let rev = ['12',3,4,85,'salim', 'saloh', 5,7,8]
+let rev = ['12', 3, 4, 85, 'salim', 'saloh', 5, 7, 8]
 // console.log(rev.reverse());          // [ 8, 7, 5, 'saloh', 'salim', 85, 4, 3, '12' ]
+
+
+/* try{
+
+}catch{
+
+} finally{
+
+}
+            xatolarni oldini olish uchun try catch dan foydalaniladi. Qatiylikni tekshirish uchun finallyni ham qo`shishimiz mumkin.
+            agar tryda xatolar bartaraf qilingan bo`lsa, yoki istisno bilan catch orqali bartaraf qilingan bo`lsa ham. finally
+            orqali oxirgi tekshiruv amalga oshiriladi. hatolar ushlanganligi yoki istisno qilinganligidan qat`iy nazar bajariladi
+*/
+let result1 = 0;
+try {
+    result1 = add(10, 20);
+} catch (e) {
+    // console.log(e.message);   //add is not defined - add e`lon qilinmagan
+} finally {
+    // console.log({ result1 }); // {result1 : 0}
+}
