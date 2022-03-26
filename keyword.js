@@ -744,3 +744,14 @@ let objSum = Object.assign(obj, obj1)
 }
  */
 
+/* in - ichida bor yo`qligini bilishimiz uchun kerak. bundan boolean natija qaytadi. true va false 
+            objectning keyiga, arrayning indexlari bilan ishlaydi*/
+const car = {
+    make: "Honda",
+    model: "Accord",
+    year: 1998
+}
+// console.log('make' in car); // car ning ichida 'make' degan key mavjud bo`lsa true aks holda false chiqadi
+
+let arra = ["red", 'blue', 'dark', 'brown']
+console.log('arra ning 0 index mavjudmi? : ',0 in arra);
