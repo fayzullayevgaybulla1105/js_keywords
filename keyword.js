@@ -797,3 +797,12 @@ let lena = {
 // person.logInfo.bind(lena, 'frontend-developer', '1245487')()
 person.logInfo.call(lena, 'frontend-developer', '1245487')
 // person.logInfo.apply(lena, ['frontend-developer', '1245487'])
+
+/* bind, call, apply - bizga context olib berish uchun kerak. ular bir xil vazifani bajaradi.
+farqi. chaqirilishida
+person1.logInfo.bind(tom,'doctor')()
+person1.logInfo.call(tom,'doctor')
+person1.logInfo.apply(tom,['doctor'])
+
+
+*/
