@@ -780,12 +780,12 @@ const person = {
     // sayHelloWindow: hello.bind(document),   
     /*bind uchun document kiritganimda Elenaning barcha ma`lumotlarini browser consolega chiqardi*/
     logInfo: function (job, phone) {
-        console.group(`${this.name} info:`)
-        console.log(`Name is ${this.name}`);
-        console.log(`Age is ${this.age}`);
-        console.log(`Job is ${job}`);
-        console.log(`Phone is ${phone}`);
-        console.groupEnd()
+        // console.group(`${this.name} info:`)
+        // console.log(`Name is ${this.name}`);
+        // console.log(`Age is ${this.age}`);
+        // console.log(`Job is ${job}`);
+        // console.log(`Phone is ${phone}`);
+        // console.groupEnd()
     }
 }
 
