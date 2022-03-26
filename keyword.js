@@ -835,3 +835,8 @@ function calc(n) {
 
 let cal = calc(5)
 cal()
+
+/******************************************* */
+/** typeof      -   o`zgaruvchining type ni bilib olishimiz mumkin */
+// console.log(typeof(cal));       // function
+// console.log(typeof(per1));      // object
