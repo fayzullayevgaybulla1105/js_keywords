@@ -487,3 +487,18 @@ delete colors[2]
 //console.log(colors);                  //      [  'red', 'yellow', <1 empty o`chirib yuborilgan item>, 'dark' ]
 colors.splice(0, 2, 'brown', 'darkblue'); //    0-indexdan 2-indexgacha bo`lgan elementlarni o`chir 2-index kirmaydi. o`chirgandan keyin bir kirigan elementlarni qo`shib qo`yadi    
 // console.log(colors);                 //      [ 'brown', 'darkblue', 'blue', 'dark' ]
+
+
+/* array.slice(start, end)  slice methodi bizga yangi massiv hosil qilib beradi. 
+        boshlanish va tugash indexlarini kiritamiz. 
+        agar boshlanish index kiritmasak ham 0-indexdan boshlab o`qishni boshlaydi. 
+        biz bergan chegaralar ichidagi ma`lumotni yangi massivda saqlab beradi.
+        massivni biz oxiridan ham o`qishimiz mumkin. (-2) -2inchi elementidan boshlab nusxa ol. 
+        massivning uzunligigacha deb ham chegara qo`yishimiz mumkin.*/
+
+// console.log(colors);
+let col = colors.slice(1, colors.length)
+// console.log(col);
+let ar1 = [1, 2, 4, 5, 6, 'salim', 'nodir', 'alex']
+let sp = ar1.slice(-5, 6)    // -5 inchi elementidan o`qi 6-indexdagi elementigacha nusxa ol.  
+console.log(sp);            // [ 5, 6, 'salim']
