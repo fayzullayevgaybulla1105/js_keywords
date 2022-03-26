@@ -848,3 +848,19 @@ let suz = 'salima'
 
 let aa = ['oila', 1, 2, 5]
 // console.log(aa.length);              // 4
+
+/* ----------------------- string methods --------------------------- */
+
+/* string.replace('o`zgartirilishi kerak bo`lgan elementni kiritiladi','kiritilishi kerak bo`lgan element ')
+                replace ning ichiga biz  string elementimizni ichidagi qaysi qismni o`zgartirishimiz kerak
+                bo`lsa, birinchi qiymat sifatida o`zgartirishimiz kerak bo`lgan qiymatni kiritamiz va ikkinchi qiymat sifatida
+                o`zgartirilishi kerak bo`lgan qiymatni o`rniga kiritiluvchi qiymatni kiritamiz. */
+let str2 = 'JS will, JS will rock you'
+let newStr = str2.replace('JS','JavaScript')    
+// console.log(newStr);                    // JavaScript wil, JS will rock you
+
+
+let newStr2 = str2.replace(/JS/g, 'JavaScript') 
+/* replace /JS/g qilib kiritishimiz global JS ya`ni stringning ichini to`liq aylanadi. JS nomli qiymat necha marta takrorlangan
+            bo`lsa barchasini JavaScript qilib o`zgartirib beradi*/
+// console.log(newStr2);                       // JavaScript wil, JavaScript will rock you
