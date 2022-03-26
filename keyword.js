@@ -721,3 +721,26 @@ let entr = Object.entries(obj);
       [ 'address', 'USA' ]
     ]
 */
+
+let obj1 = {
+    job: "backend developer",
+    experience: "5 years",
+    interest: "ping-pong"
+}
+
+/* Object.assign() methodi ikkita object ma`lumotlarini yangi objectga jamlab beradi */
+let objSum = Object.assign(obj, obj1)
+// console.log(objSum); 
+/*
+{
+  name: 'alex',
+  fullname: 'smith',
+  age: 25,
+  contact: '+1124784585',
+  address: 'USA',
+  job: 'backend developer',
+  experience: '5 years',
+  interest: 'ping-pong'
+}
+ */
+
