@@ -353,13 +353,13 @@ let S = 41
 let D = '41'
 switch (S == D) {
     case true:
-        // console.log("true qaytdimi");
+    // console.log("true qaytdimi");
     // break
     case false:
-        // console.log('tiplari teng emas');
+    // console.log('tiplari teng emas');
     // break
     default:
-        console.log(true);
+        // console.log(true);
     // break
 
 }
@@ -519,3 +519,13 @@ let jo = con.join("-")
 // console.log(typeof(jo));     // string
 // console.log(jo);             // darkblue--dark-5-6-salim        // darkbluedan keyin 2ta - belgi keldi bo`sh joyni o`rniga ham - qo`yib beradi
 
+/* array.fill(yangi element, 1,3)       - arraydagi elementlarni ushbu method orqali barchasini yoki belgilangan 
+                                        indexdagilarini o`zgartirib yuborishimiz mumkin.  barchasini o`zgartirish uchun 
+                                        fill ning ichiga yangi elementni o`zinigina kiritsak, barcha elementlarni o`rniga
+                                        shu yangi elementimizni kiritib beradi. fill ga shart berish (yangi element, start, end) 
+                                        start-bu boshlanish end - tugash yani  startdagi indexdan end ga kiritilgan indexgacha 
+                                        bo`lgan elementlarni o`zgaritirib beradi. faqat startni o`zini ham berishimiz mumkin.*/
+
+let animals = ['elephant', 'dog', 'cat', 'monkey', 'mouse']
+let fil = animals.fill('crocodile', 3)
+// console.log(fil);           //['elephant', 'dog', 'cat', 'crocodile', 'crocodile']  - 3-indexdan boshlab qolgan indexdagi elementlarni ham crocodile ga o`zgartiradi tugash indexni kiritmaganimiz uchun
