@@ -508,3 +508,13 @@ let sp = ar1.slice(-5, 6)    // -5 inchi elementidan o`qi 6-indexdagi elementiga
                                                                 qiladi yani bir butun arrayga aylantirib beradi */
 let con = col.concat(sp)
 // console.log(con);        // ['darkblue', <1 bo`sh joy>, 'dark', 5, 6, 'salim']
+
+
+/* array.join()     -    massivdagi ma`lumotni stringga olib beradi join() qavs ichida qanaqadir 
+                        belgi qo`yishimiz mumkin,  elementlar orasiga shu belgilarni qo`yib beradi, 
+                        faqat kiritmoqchi bo`lgan belgimizni ham qavsni ichida stringga olib kiritishimiz kerak.
+                        aks holda o`zi comma(,) vergul qo`yib chiqaradi.*/
+console.log(con);
+let jo = con.join("-")
+// console.log(typeof(jo));     // string
+console.log(jo);             // darkblue--dark-5-6-salim        // darkbluedan keyin 2ta - belgi keldi bo`sh joyni o`rniga ham - qo`yib beradi
