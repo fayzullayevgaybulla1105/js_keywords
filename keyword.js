@@ -477,3 +477,13 @@ colors.unshift('white')
 /* array.shift()        - bu method arrayning 0-indexda turgan ya`ni arrayning birinchi elementini o`chirib yuboradi */
 colors.shift()
 // console.log(colors);
+
+// delete               - arraydagi elementni o`chirish uchun arrayni chaqirib unga element indexini beramiz colors[2]
+delete colors[2]
+// console.log(colors);
+
+
+/* array.splice(boshlanish, o`shirish, kiritilmoqchi bo`lgan element vergul qo`yib yoziladi)*/
+//console.log(colors);                  //      [  'red', 'yellow', <1 empty o`chirib yuborilgan item>, 'dark' ]
+colors.splice(0, 2, 'brown', 'darkblue'); //    0-indexdan 2-indexgacha bo`lgan elementlarni o`chir 2-index kirmaydi. o`chirgandan keyin bir kirigan elementlarni qo`shib qo`yadi    
+// console.log(colors);                 //      [ 'brown', 'darkblue', 'blue', 'dark' ]
