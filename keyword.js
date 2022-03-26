@@ -829,7 +829,7 @@ bind(per1, personLog)()
                             shu o`zgaruvchini funksiya sifatida chaqirib qo`yish. ichki funksiyadagi qiymatni chiqarib beradi  */
 function calc(n) {
     return function () {
-        console.log(1000 * n);
+        // console.log(1000 * n);
     }
 }
 
@@ -840,3 +840,11 @@ cal()
 /** typeof      -   o`zgaruvchining type ni bilib olishimiz mumkin */
 // console.log(typeof(cal));       // function
 // console.log(typeof(per1));      // object
+
+let suz = 'salima'
+// console.log(suz.toLowerCase());     // toLowerCase - stringni kichik harfga qilib beradi
+// console.log(suz.toUpperCase());     // toUpperCase - stringni katta harfga qilib beradi
+// console.log(suz.length);            // length      - array va stringning uzunligini ko`rishimiz mumkin
+
+let aa = ['oila', 1, 2, 5]
+// console.log(aa.length);              // 4
