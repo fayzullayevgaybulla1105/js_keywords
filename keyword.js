@@ -754,4 +754,6 @@ const car = {
 // console.log('make' in car); // car ning ichida 'make' degan key mavjud bo`lsa true aks holda false chiqadi
 
 let arra = ["red", 'blue', 'dark', 'brown']
-console.log('arra ning 0 index mavjudmi? : ',0 in arra);
+// console.log('arra ning 0 index mavjudmi? : ',0 in arra);
+console.log(arra instanceof Array);
+console.log(arra instanceof Object);
