@@ -856,11 +856,18 @@ let aa = ['oila', 1, 2, 5]
                 bo`lsa, birinchi qiymat sifatida o`zgartirishimiz kerak bo`lgan qiymatni kiritamiz va ikkinchi qiymat sifatida
                 o`zgartirilishi kerak bo`lgan qiymatni o`rniga kiritiluvchi qiymatni kiritamiz. */
 let str2 = 'JS will, JS will rock you'
-let newStr = str2.replace('JS','JavaScript')    
+let newStr = str2.replace('JS', 'JavaScript')
 // console.log(newStr);                    // JavaScript wil, JS will rock you
 
 
-let newStr2 = str2.replace(/JS/g, 'JavaScript') 
+let newStr2 = str2.replace(/JS/g, 'JavaScript')
 /* replace /JS/g qilib kiritishimiz global JS ya`ni stringning ichini to`liq aylanadi. JS nomli qiymat necha marta takrorlangan
             bo`lsa barchasini JavaScript qilib o`zgartirib beradi*/
 // console.log(newStr2);                       // JavaScript wil, JavaScript will rock you
+
+
+/*********************************************************************************** */
+/* string.repeat(qiymat)    - ushbu method string elementimiz qiymatini repeatda kiritgan sonimizcha chiqarib beradi. Manfiy sonni qabul qilmaydi*/
+let k = 1;
+let s11 = 'salim'
+console.log(s11.repeat(k))       // salimsalimsalimsalimsalim
