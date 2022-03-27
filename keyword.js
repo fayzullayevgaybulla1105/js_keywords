@@ -1003,4 +1003,13 @@ let ev = ever.every(function (number) {
                                 false beradi. sonini farqi yo`q birinchi ushlaganidan
                                  darxol to`xtaydi. false natija qaytaradi*/
 })
-console.log(ev);
+// console.log(ev);
+
+/********************************************* */
+/* array.some */
+let som = [1, 5, 8, 9, 4, -3]
+let some1 = som.some(function (number) {
+    return number >= 0      /* array ichida 0 dan kichik son bormi. bor bo`lsa true aks holda bo`lsa false
+                                 */
+})
+console.log(some1);
