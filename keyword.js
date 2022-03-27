@@ -924,8 +924,8 @@ let iterator = map.entries()
   [ 'jessie', { phone: '123456' } ]
 }
 */
-for(let [key, val] of iterator){
-    console.log(`key : ${key} value : ${val}`);
+for (let [key, val] of iterator) {
+    // console.log(`key : ${key} value : ${val}`);
     // console.log('value: ',val);
 }
 
@@ -935,3 +935,29 @@ for(let [key, val] of iterator){
 // console.log(iterator.next().value);
 
 
+/* ---------------- new Set() ------------------------  */
+/* set1.add()   - qiymat kiritishimiz mumkin. key value saqlab bo`lmaydi. saqlagani bilan uni hisobga olmaydi.
+                set1.entries() - [key,value] qilib ko`rmoqchi bo`lganimizda ham keyimizni ikki arrayni ichiga [12,12] xolatida yozib beradi 
+                set1.keys() - degan funksiyasi yo`q
+                set1.values() - valuesi olish mumkin.  
+                // console.log(inter.next().value)
+                set1.clear() - objectimizni value larini tozalab beradi
+                set1.has(12)    - objectimizni ichida 12 raqami bo`lsa true aks holda false qaytaradi
+                */ 
+
+let set1 = new Set()
+set1.add(12, 'un ikki')
+set1.add('13', 'un uch')
+set1.add(12, 'un ikki')
+set1.add(12, 'uch')
+// console.log();
+// console.log(set1.has('13'));
+// console.log(set1);
+
+const inter = set1.entries()
+
+// console.log(inter);
+for (let i of inter) {
+    console.log('qiymat: ', i);
+}
+// console.log(inter.next().value)
