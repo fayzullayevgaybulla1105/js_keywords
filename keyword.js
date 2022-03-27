@@ -943,7 +943,7 @@ for (let [key, val] of iterator) {
                 // console.log(inter.next().value)
                 set1.clear() - objectimizni value larini tozalab beradi
                 set1.has(12)    - objectimizni ichida 12 raqami bo`lsa true aks holda false qaytaradi
-                */ 
+                */
 
 let set1 = new Set()
 set1.add(12, 'un ikki')
@@ -958,6 +958,29 @@ const inter = set1.entries()
 
 // console.log(inter);
 for (let i of inter) {
-    console.log('qiymat: ', i);
+    // console.log('qiymat: ', i);
 }
 // console.log(inter.next().value)
+
+/****************************************************************** */
+/* new WeakMap() -da key value kiritish mumkin, key faqat funksiya,
+                object yoki array holatida bo`lishi kerak
+                Map da console.log(map) 
+                */
+
+let wm1 = new WeakMap(),
+    wm2 = new WeakMap(),
+    wm3 = new WeakMap()
+
+let o1 = {},
+o2 = function(){},
+o3 = ['salik']
+
+wm1.set(o3,32)
+wm1.set(['12'],32)
+wm2.set(o1,o2)
+wm3.set(o3,32)
+
+// console.log(wm1.get(o3));
+// console.log(wm1);        WeakMap { <items unknown> }
+// console.log(wm1);        WeakMap { <items unknown> }
