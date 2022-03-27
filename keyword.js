@@ -770,7 +770,7 @@ let brand = counter.next.bind(counter)
 
 
 function hello() {
-    console.log('Hello', this);
+    // console.log('Hello', this);
 }
 
 const person = {
@@ -870,4 +870,22 @@ let newStr2 = str2.replace(/JS/g, 'JavaScript')
 /* string.repeat(qiymat)    - ushbu method string elementimiz qiymatini repeatda kiritgan sonimizcha chiqarib beradi. Manfiy sonni qabul qilmaydi*/
 let k = 1;
 let s11 = 'salim'
-console.log(s11.repeat(k))       // salimsalimsalimsalimsalim
+// console.log(s11.repeat(k))       // salimsalimsalimsalimsalim
+
+
+/********************************************************************* */
+
+/* Arraydagi ma`lumotni Object ko`rinishida aks ettirish */
+
+const arrObj = [
+    ['name', 'Alish'],
+    ['age', 20]
+]
+// console.log(Object.fromEntries(arrObj));
+
+/* Objectdagi ma`lumotni Array ko`rinishida aks ettirish */
+const objArr = {
+    name: 'alish',
+    age: 20
+}
+// console.log(Object.entries(objArr));
