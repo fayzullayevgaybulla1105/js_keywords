@@ -889,3 +889,49 @@ const objArr = {
     age: 20
 }
 // console.log(Object.entries(objArr));
+
+
+/******************************************* */
+/* ---------------- new Map() ------------------------  */
+/* new Map() - object hisoblanadi. bizga yangi object yaratib beradi. kiritiluvchi keylar unical hisoblanadi.
+                keyning valuesiga bog`liq. shu key nomi bilan ikkinchi marta qiymat kiritsak birinchi valuedan 
+                farqli bo`lsa ikkinchi value ga o`zgartiradi. key va value orasida => belgi bilan saqlaydi.
+                map.get(key)    - orqali keyning valuelarini ko`rishimiz mumkin.
+                map.size        - hajmini(objectdagi elementlarni soni  ) ko`rishimiz mumkin.
+                map.delete('key') - key orqali key va value ni o`chirib yuborish
+                map.has(key)    -   shu key mavjud bo`lsa true aks holda false qiymat qaytaradi
+                map.entries()   - [key, value] ni ko`rib olishimiz mumkin
+                map.keys()      - key larni ko`rish
+                map.values()      - value larni ko`rish
+                
+                */
+let map = new Map()
+map.set('1', 'str1')
+map.set(1, 'bir')
+map.set(1, 'uch')
+
+map.set('jessie', { phone: "123456" })
+// console.log(map.get('jessie'));          // { phone: '123456' }
+// console.log(map);                        // Map(3) { '1' => 'str1', 1 => 'bir', 'jessie' => { phone: '123456' } }
+// console.log(map.size);                   // 3    
+
+// console.log(map.has('jessie'));          // true
+let iterator = map.entries()
+/*
+[Map Entries] {
+  [ '1', 'str1' ],
+  [ 1, 'bir' ],
+  [ 'jessie', { phone: '123456' } ]
+}
+*/
+for(let [key, val] of iterator){
+    console.log(`key : ${key} value : ${val}`);
+    // console.log('value: ',val);
+}
+
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+
+
