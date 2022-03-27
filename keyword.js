@@ -994,4 +994,13 @@ let numbers = [1, 5, 8, -9, 3, -4, 5]
 let filtered = numbers.filter(function (number) {
     return number >= 0  // 0 ga teng va undan katta raqamlarni oladi, manfiyni emas. biz shunday shart berganmiz
 })
-console.log(filtered);
+// console.log(filtered);
+
+/* array.every      - massiv ichida bir dona bo`lsa ham manfiy son bo`lsa shu zahoti false qaytaradi aksincha bo`lsa true qaytaradi   */
+let ever = [1, 5, 8, 9, -6, 4]
+let ev = ever.every(function (number) {
+    return number >= 0          /* massiv ichida 0 dan kichik ya`ni manfiy raqam bo`lsa 
+                                false beradi. sonini farqi yo`q birinchi ushlaganidan
+                                 darxol to`xtaydi. false natija qaytaradi*/
+})
+console.log(ev);
