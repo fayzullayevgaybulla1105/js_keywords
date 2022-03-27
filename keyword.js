@@ -973,14 +973,25 @@ let wm1 = new WeakMap(),
     wm3 = new WeakMap()
 
 let o1 = {},
-o2 = function(){},
-o3 = ['salik']
+    o2 = function () { },
+    o3 = ['salik']
 
-wm1.set(o3,32)
-wm1.set(['12'],32)
-wm2.set(o1,o2)
-wm3.set(o3,32)
+wm1.set(o3, 32)
+wm1.set(['12'], 32)
+wm2.set(o1, o2)
+wm3.set(o3, 32)
 
 // console.log(wm1.get(o3));
 // console.log(wm1);        WeakMap { <items unknown> }
 // console.log(wm1);        WeakMap { <items unknown> }
+
+
+/****************************** */
+/* array.filtermethod   -   bu methodga argument sifatida callback funksiya beriladi.
+                            yangi array yaratib beradi */
+
+let numbers = [1, 5, 8, -9, 3, -4, 5]
+let filtered = numbers.filter(function (number) {
+    return number >= 0  // 0 ga teng va undan katta raqamlarni oladi, manfiyni emas. biz shunday shart berganmiz
+})
+console.log(filtered);
