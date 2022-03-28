@@ -1141,3 +1141,59 @@ function salom() {
 // setTimeout(salom,5000)
 // console.log('finished setTimeOut');
 
+/*** ---------JSON -------- ***/
+/* JSON - javascript Object Notation - bu ma`lumotlarni saqlash va uzatish uchun ishlatiladigan
+         matnga asoslangan ma`lumot formati.
+         JS objectiga xususiyatiga o`xshaydi key:value saqlaydi. Qo`shtirnoq ichida yoziladi.
+         JSON key uchun qo`shtirnoq talab qiladi. JS objectidan farqli - JSON malumotlari
+         funksiyalarni value sifatida o`z ichiga olmaydi.
+         JSON ma`lumotlariga kirish 2xil
+         1- (.key) nuqta dan foydalanib
+         2- ['key'] orqali.
+         JSON ni JS objectiga aylantirish*/
+// JSON array
+[ "apple", "mango", "banana"]
+
+// JSON array containing objects
+[
+    { "name": "John", "age": 22 },
+    { "name": "Peter", "age": 20 },
+    { "name": "Mark", "age": 23 }
+]
+
+// JSON object
+const data = {
+    "name": "John",
+    "age": 22,
+    "hobby": {
+	"reading" : true,
+	"gaming" : false,
+	"sport" : "football"
+    },
+    "class" : ["JavaScript", "HTML", "CSS"]
+}
+
+/*JSON.parse()  -funksiyadan foydalanib, JSON ma'lumotlarini 
+                JavaScript ob'ektiga aylantirishimiz mumkin.*/
+// json object
+const jsonData = '{ "name": "John", "age": 22 }';
+
+// converting to JavaScript object
+const objO = JSON.parse(jsonData);
+
+// accessing the data
+console.log(objO.name); // John
+
+
+/* JSON.stringify() - Shuningdek, JavaScript-ning o'rnatilgan funksiyasidan
+                     foydalanib, JavaScript obyektlarini JSON formatiga 
+                     o'zgartirishimiz mumkin*/
+
+// JavaScript object
+const jsonData2 = { "name": "John", "age": 22 };
+
+// converting to JSON
+const obj2 = JSON.stringify(jsonData2);
+
+// accessing the data
+console.log(obj2); // "{"name":"John","age":22}"
