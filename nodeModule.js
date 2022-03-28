@@ -20,3 +20,16 @@ modullar 3 turga bo`linadi
             - npm paketlari asosida o`zimizga global yoki loyiha papkasida o`rnatilishi.
             express, mongoose, react, angular hokazo
                 */
+// fs - file system - fayllar bilan ishlovchi module(o`chirish, yozish, o`qish, yaratish)
+/*
+fayllar bilan ishlash sinxron yoki asinxron holatlarda ishlash mumkin. 
+            Sinxron - bloklangan funksiya deyish mumkin. Ya`ni har bir operatsiya tugashini
+                    kutadi. shundan keyingina keyingi amalni bajaradi. keyingi buyruqni bajarilishini bloklaydi,
+                    ya`ni so`rov bajarilmagunicha, buyruq bajarilmaydi.
+            
+            Asinxron - bloklanmagan funksiya. Hech qachon har bir operatsiya tugashini kutmaydi. Operatsiyalarni birinchi
+                    bosqichda bajaradi. Har bir operatsiya natijasi natija mavjud bo'lgandan keyin qayta ishlanadi, ya'ni 
+                    har bir buyruq oldingi buyruq bajarilgandan so'ng tez orada 
+                    bajariladi. Oldingi buyruq fonda ishlaydi va ma'lumotlarni qayta
+                     ishlashni tugatgandan so'ng natijani yuklaydi.
+*/
