@@ -1116,6 +1116,14 @@ let vada = new Promise((resolve, reject) => {
  asyncFunc()
 */
 
+/*
+promise -Va'da uchta holatdan biriga ega bo'lishi mumkin.
+    pending     -    Kutilmoqda
+    fulfilled   -    Bajarildi
+    rejected    -    Rad etilgan
+
+    setTimeOut - kiritilishi shart sababi kutish jarayoni barcha holatlar
+*/
 
 
 
