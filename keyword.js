@@ -1074,13 +1074,13 @@ nasl olingandan keyin uni funksiya sifatida taniy olmadi*/
 let qarz = 700
 let niyat = false
 let vada = new Promise((resolve, reject) => {
-   /* setTimeout(() => {
-        if (niyat) {
-            resolve('mana ol, ' + qarz)
-        } else {
-            reject('pulim yo`q')
-        }
-    }, 3000)*/
+    /* setTimeout(() => {
+         if (niyat) {
+             resolve('mana ol, ' + qarz)
+         } else {
+             reject('pulim yo`q')
+         }
+     }, 3000)*/
 })
 /* 1- usul then,catch,finally */
 
@@ -1126,4 +1126,18 @@ promise -Va'da uchta holatdan biriga ega bo'lishi mumkin.
 */
 
 
+/*---------------------------------- */
+/* setTimeOut - (function, milliseconds)    
+                - birinchi argumenti sifatida funksiya oladi,
+                -ikkinchi argumentiga birinchi argumentdagi 
+                funksiya bajarilgandan keyingi kutish vaqti kiritiladi             */
+function salom() {
+    // for (let i = 0; i < num; i++) {
+
+        // console.log('hello world ' );
+    // }
+}
+// salom()
+// setTimeout(salom,5000)
+// console.log('finished setTimeOut');
 
