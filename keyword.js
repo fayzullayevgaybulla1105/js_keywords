@@ -1134,7 +1134,7 @@ promise -Va'da uchta holatdan biriga ega bo'lishi mumkin.
 function salom() {
     // for (let i = 0; i < num; i++) {
 
-        // console.log('hello world ' );
+    // console.log('hello world ' );
     // }
 }
 // salom()
@@ -1152,7 +1152,7 @@ function salom() {
          2- ['key'] orqali.
          JSON ni JS objectiga aylantirish*/
 // JSON array
-[ "apple", "mango", "banana"]
+["apple", "mango", "banana"]
 
 // JSON array containing objects
 [
@@ -1166,11 +1166,11 @@ const data = {
     "name": "John",
     "age": 22,
     "hobby": {
-	"reading" : true,
-	"gaming" : false,
-	"sport" : "football"
+        "reading": true,
+        "gaming": false,
+        "sport": "football"
     },
-    "class" : ["JavaScript", "HTML", "CSS"]
+    "class": ["JavaScript", "HTML", "CSS"]
 }
 
 /*JSON.parse()  -funksiyadan foydalanib, JSON ma'lumotlarini 
@@ -1182,7 +1182,7 @@ const jsonData = '{ "name": "John", "age": 22 }';
 const objO = JSON.parse(jsonData);
 
 // accessing the data
-console.log(objO.name); // John
+// console.log(objO.name); // John
 
 
 /* JSON.stringify() - Shuningdek, JavaScript-ning o'rnatilgan funksiyasidan
@@ -1196,4 +1196,28 @@ const jsonData2 = { "name": "John", "age": 22 };
 const obj2 = JSON.stringify(jsonData2);
 
 // accessing the data
-console.log(obj2); // "{"name":"John","age":22}"
+// console.log(obj2); // "{"name":"John","age":22}"
+
+
+/************************************************ */
+/* map iteratori - massiv ichini aylanib undagi qiymatlarni chiqarish uchun 
+                boshqa bir ozgaruvchi ochib olamiz va map orqali birinchi massivimizni
+                ichini aylanganimizda returnda chiqishi kerak bo`lgan shartlarni berganimizda
+                o`zgaruvchimizni massiv typeda qilib qiymatlarni massivda saqlab beradi.
+    forEach -   massivni aylanganida undagi har bir qiymatni number holatida chiqarib beradi. 
+                unda return qilib  bo`lmaydi. biror o`zgaruvchiga tenglamoqchi bo`lganimizda 
+                ham yuqorida u o`zgaruvchining type [] massiv deb berib olishimiz shart va 
+                qiymatlarni push methodi orqali shu o`zgaruvchiga kiritib olamiz. 
+                */
+const number12 = [12, 5, 4, 8, -5]
+const doub = number12.map(num => {
+    return num * 2
+})
+// console.log({ doub });
+
+let doubFor = []
+number12.forEach(num => {
+    // return num * 2
+    doubFor.push(num * 2)
+})
+// console.log(doubFor);
