@@ -1012,4 +1012,59 @@ let some1 = som.some(function (number) {
     return number >= 0      /* array ichida 0 dan kichik son bormi. bor bo`lsa true aks holda bo`lsa false
                                  */
 })
-console.log(some1);
+// console.log(some1);
+
+/* ----------------Array.reduce() -----------------*/
+let sum1 = som.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue
+}, 0)
+// console.log(sum1);
+
+/******************************************************************* */
+/* Class - sinf - qandaydir nom ostida sinf yaratishimiz mumkin, undan instance(nusxa), extends (nasl) olishimiz mumkin.
+                constructor elementlarini foydalanuvchi ko`rishi uchun taqiq qo`yishimiz mumkin.
+                ya`ni faqatgina classni ichida ishlatilishi mumkin deb qo`yish. 
+                public(ochiq) #private(yopiq). statik
+                statik qilingan methodni classning o`zidagini chaqirib olishimiz mumkin. extends olingandan keyin ko`rib bo`lmaydi. 
+                Statik qo`yilishi faqat shu class dagina ko`rish imkonini berish.
+                #private qilingan elementlarni boshqa nasl yoki instance olingan class yoki objectlarda chaqirib ishlatib bo`lmaydi.
+                xattoki u classlarda ko`rinmaydi. shu element borligi. tashqi muhitdan himoyalash.
+                constructor(){} - bizga keluvchi elementlarni nazorat qilamiz. sinf xususiyatlari saqlanadi.
+                classlarda bir qancha constructor 1 dona destructor ya`ni o`chiruvchi bo`ladi
+                super() degana method bor unda ota classning barcha xususiyatlarini ya`ni constructorini olishimiz mumkin.
+                  ----------------- */
+
+class Person {
+    #firstname
+    name
+    constructor(name) {
+        this.#firstname = 'fayzullayev' //#firstname - private yoshirin element bo`ldi 
+        this.name = name
+    }
+    static bigger(a, b) {
+        return a > b ? a : b
+    }
+    get names() {
+        return [this.name, this.#firstname]
+    }
+    /*SyntaxError: Setter must have exactly one formal parameter. Setterga parametr kiritilishi shart */
+    set say(value) {
+        this.name = value
+    }
+}
+let ali = new Person()    // Person degan objectdan ali degan object nusxa olindi
+ali.name = 'nodir'
+ali.say = 'jalil'
+console.log(ali);
+// console.log(Person.bigger(20,1002)); //
+// console.log(ali.bigger(20,1));  
+/*TypeError: ali.bigger is not a function 
+- chunki biz bu funksiyani statik qildik. 
+nasl olingandan keyin uni funksiya sifatida taniy olmadi*/
+
+// console.log(ali);   Person { name: 'salim' }
+// console.log(ali.constructor.name); //[class Person]
+
+/******** */
+
+
