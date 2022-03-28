@@ -33,3 +33,48 @@ fayllar bilan ishlash sinxron yoki asinxron holatlarda ishlash mumkin.
                     bajariladi. Oldingi buyruq fonda ishlaydi va ma'lumotlarni qayta
                      ishlashni tugatgandan so'ng natijani yuklaydi.
 */
+let fs = require('fs')
+/* -------------------------------------------- */
+// Asychronous read
+fs.readFile('input.txt', function (err, data) {
+    if (err) {
+        return console.log(err);
+    }
+    // console.log("Asynxron o`qish: " + data.toString());
+})
+
+/* -------------------------------------------- */
+// Synchronous read
+let data = fs.readFileSync('input.txt')
+// console.log("Synchronous read: " + data.toString());
+
+
+/********************************************** */
+// fs.open()
+// Asynchronous  - Opening File
+// console.log("Opening file!");
+fs.open('input.txt', 'r+', function (err, fd) {
+    if (err) {
+        return console.error(err);
+    }
+    // console.log("File open successfully");
+})
+
+/************************************************* */
+// fs.writeFile
+
+console.log("writing into existing file");
+let data1 = "Geek For Geeks"
+fs.writeFile('input.txt', data1, (err) => {
+    if (err) {
+        return console.error(err);
+    }
+    console.log('Data written successfully');
+    console.log("Let's read newly written data");
+    fs.readFile('input.txt', function (err, data) {
+        if (err) {
+            console.error(err);
+        }
+        console.log("Asynchronous read: " + data.toString());
+    })
+})
