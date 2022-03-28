@@ -107,3 +107,81 @@ console.log(path.format({
 //console.log(path.basename('/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js'));     //nodeModule.js - base nomini olib beradi
 // console.log(path.dirname('/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js')); 
 /*/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam -- filemiz joylashgan papkagacha manzilni chiqarib berar ekan */
+
+/* OS -operatsion tizim bo`yicha yani bizdagi OZU, Xotira, VideoCard, 
+        OT haqida ishlab turgan kompyuterimizning barcha harakteristikasini beradi */
+let os = require('os')
+// console.log(os.hostname());     // kompyuterimiz nomi - fayzullayev-HP
+// console.log(os.freemem());          // 2610647040 xotiradagi bo`sh tizimni butun sonda baytlarda miqdorini qaytaradi 
+// console.log(os.homedir());       // /home/fayzullayev
+// console.log(os.cpus());             // microprosessor nomini uning ishlash holatlarini ko`rish mumkin
+/**
+ * [
+     {
+        model: 'AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx',
+        speed: 1630,
+        times: {
+          user: 3765180,
+          nice: 111180,
+          sys: 447620,
+          idle: 21768440,
+          irq: 0
+       }
+     },
+     {
+       model: 'AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx',
+       speed: 1700,
+       times: { user: 3457830, nice: 80520, sys: 284420, idle: 21409820, irq: 0 }
+     }
+    ]
+  
+ */
+// console.log(os.arch());     // o`rnatilgan tizimimiz qaysi razryaddaligini ko`rsatadi x64
+// console.log(os.version());      // #42~20.04.1-Ubuntu SMP Tue Mar 15 15:44:28 UTC 2022 o`rnatilgan OT nomini versiyalarini ko`rsatadi 
+// console.log(os.endianness());       // LE
+// console.log(os.getPriority());      // 0
+// console.log(os.networkInterfaces()); Qaysi tarmoqda ishlayabmiz. IP adresslarimiz tarmoq bo`yicha barcha ma`lumotlar
+/**
+ {
+  lo: [
+    {
+      address: '127.0.0.1',
+      netmask: '255.0.0.0',
+      family: 'IPv4',
+      mac: '00:00:00:00:00:00',
+      internal: true,
+      cidr: '127.0.0.1/8'
+    },
+    {
+      address: '::1',
+      netmask: 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff',
+      family: 'IPv6',
+      mac: '00:00:00:00:00:00',
+      internal: true,
+      cidr: '::1/128',
+      scopeid: 0
+    }
+  ],
+  wlo1: [
+    {
+      address: '192.168.1.42',
+      netmask: '255.255.255.0',
+      family: 'IPv4',
+      mac: '28:cd:c4:05:b6:fb',
+      internal: false,
+      cidr: '192.168.1.42/24'
+    },
+    {
+      address: 'fe80::befa:2ff1:c351:bf18',
+      netmask: 'ffff:ffff:ffff:ffff::',
+      family: 'IPv6',
+      mac: '28:cd:c4:05:b6:fb',
+      internal: false,
+      cidr: 'fe80::befa:2ff1:c351:bf18/64',
+      scopeid: 3
+    }
+  ]
+}
+ */
+// console.log(os.platform());         // linux - Qaysi platformada ishlab turgani
+// console.log(os.release());              // 5.13.0-37-generic
