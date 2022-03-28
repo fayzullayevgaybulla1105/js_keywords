@@ -33,7 +33,8 @@ fayllar bilan ishlash sinxron yoki asinxron holatlarda ishlash mumkin.
                     bajariladi. Oldingi buyruq fonda ishlaydi va ma'lumotlarni qayta
                      ishlashni tugatgandan so'ng natijani yuklaydi.
 */
-let fs = require('fs')
+let fs = require('fs');
+// const path = require('path/posix');
 /* -------------------------------------------- */
 // Asychronous read
 fs.readFile('input.txt', function (err, data) {
@@ -53,28 +54,56 @@ let data = fs.readFileSync('input.txt')
 // fs.open()
 // Asynchronous  - Opening File
 // console.log("Opening file!");
-fs.open('input.txt', 'r+', function (err, fd) {
+/*fs.open('input.txt', 'r+', function (err, fd) {
     if (err) {
         return console.error(err);
     }
     // console.log("File open successfully");
 })
-
+*/
 /************************************************* */
 // fs.writeFile
 
-console.log("writing into existing file");
+// console.log("writing into existing file");
 let data1 = "Geek For Geeks"
-fs.writeFile('input.txt', data1, (err) => {
+/*fs.writeFile('input.txt', data1, (err) => {
     if (err) {
         return console.error(err);
     }
-    console.log('Data written successfully');
-    console.log("Let's read newly written data");
+    // console.log('Data written successfully');
+    // console.log("Let's read newly written data");
     fs.readFile('input.txt', function (err, data) {
         if (err) {
             console.error(err);
         }
-        console.log("Asynchronous read: " + data.toString());
+        // console.log("Asynchronous read: " + data.toString());
     })
+})*/
+
+/********************************************** */
+// fs.rename('ozgarishi kk bo`lgan fayl nomi.formati', 'yangi nom.format kiritilishi kerak', (function){})  - file nomini o`zgartirish
+/*fs.rename('new.txt', 'input.txt',(err)=>{
+    if(err){
+        return console.error(err);
+    }
+    // console.log("File rename");
 })
+*/
+/**************** path**************** */
+let path = require('path')
+
+// console.log( path.extname('nodeModule.js'))     // .js
+
+/*
+console.log(path.format({
+    root:"/",
+    name:"nodeModule",
+    ext:".js"
+
+}));            // /nodeModule.js
+*/
+// console.log(path.join(__dirname, 'nodeModule.js')); ///media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js
+// console.log(path.join(process.cwd(), 'nodeModule.js'));
+//console.log(path.basename('/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js'));     //nodeModule.js - base nomini olib beradi
+// console.log(path.dirname('/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js')); 
+/*/media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam -- filemiz joylashgan papkagacha manzilni chiqarib berar ekan */
