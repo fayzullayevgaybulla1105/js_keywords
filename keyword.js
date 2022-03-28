@@ -1024,7 +1024,7 @@ let sum1 = som.reduce((accumulator, currentValue) => {
 /* Class - sinf - qandaydir nom ostida sinf yaratishimiz mumkin, undan instance(nusxa), extends (nasl) olishimiz mumkin.
                 constructor elementlarini foydalanuvchi ko`rishi uchun taqiq qo`yishimiz mumkin.
                 ya`ni faqatgina classni ichida ishlatilishi mumkin deb qo`yish. 
-                public(ochiq) #private(yopiq). statik
+                modifikatorlar - public(ochiq) #private(yopiq) ptotected(ximoyalangan). statik
                 statik qilingan methodni classning o`zidagini chaqirib olishimiz mumkin. extends olingandan keyin ko`rib bo`lmaydi. 
                 Statik qo`yilishi faqat shu class dagina ko`rish imkonini berish.
                 #private qilingan elementlarni boshqa nasl yoki instance olingan class yoki objectlarda chaqirib ishlatib bo`lmaydi.
@@ -1055,7 +1055,7 @@ class Person {
 let ali = new Person()    // Person degan objectdan ali degan object nusxa olindi
 ali.name = 'nodir'
 ali.say = 'jalil'
-console.log(ali);
+// console.log(ali);
 // console.log(Person.bigger(20,1002)); //
 // console.log(ali.bigger(20,1));  
 /*TypeError: ali.bigger is not a function 
@@ -1065,6 +1065,57 @@ nasl olingandan keyin uni funksiya sifatida taniy olmadi*/
 // console.log(ali);   Person { name: 'salim' }
 // console.log(ali.constructor.name); //[class Person]
 
-/******** */
+/******** PROMISE *******************/
+/* promise(resolve,reject)  - vada, resolve-berish niyati bo`lish, reject- baxona.
+                    promiseni olishning 2 xil usuli mavjud
+                    1. .then,catch/finaly orqali olish, 
+                    2. async/await
+                     */
+let qarz = 700
+let niyat = false
+let vada = new Promise((resolve, reject) => {
+   /* setTimeout(() => {
+        if (niyat) {
+            resolve('mana ol, ' + qarz)
+        } else {
+            reject('pulim yo`q')
+        }
+    }, 3000)*/
+})
+/* 1- usul then,catch,finally */
+
+/*vada
+    .then(
+        (data) => {
+            console.log(data);
+        }
+    )
+    .catch(
+        (error) => {
+            console.log(error);
+        }
+    )
+    .finally(
+        () => {
+            console.log('Vada bajarildi');
+        }
+    )
+*/
+
+
+/* 2-usul async/await */
+/* async function asyncFunc() {
+//xatoliklarni oldini olish uchun try/catch ishlatildi
+     try {
+         let result = await vada;
+         console.log(result)
+     } catch (error) {
+         console.log(error);
+     }
+ }
+ asyncFunc()
+*/
+
+
 
 
