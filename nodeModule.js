@@ -260,3 +260,21 @@ const { getHashes } = require('crypto')
   'whirlpool'
 ]
 */
+
+const { Buffer } = require('buffer')
+const { hkdf, hkdfSync } = require('crypto')
+
+/******** hkdf  asynchronous **************/
+/* hksf asychronous da hkdfSycn dan farqli 6- argumentida callback funksiya qabul qiladi. 
+         sha512 64bayt uzunlikdagi hashni hosil qiladi. ArrayBuffer holatida keladi
+         Buffer.from(derivedKey) buffer holatidan toStringga hex orqali o`tkazib olinadi.
+         5-argument sifatida berilgan 64 qiymat ham sha512 ning 64 baytlik hash uzunlik chegarasini belgilaydi.
+            */
+hkdf('sha512', 'key', 'salt', 'info', 64, (err, derivedKey) => {
+  if (err) throw err
+  // console.log(Buffer.from(derivedKey).toString('hex'));
+})
+
+/******** hkdfSync  synchronous **************/
+const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info',64)
+console.log(Buffer.from(derivedKey).toString('hex'));
