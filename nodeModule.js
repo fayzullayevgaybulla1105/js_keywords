@@ -37,16 +37,16 @@ let fs = require('fs');
 // const path = require('path/posix');
 /* -------------------------------------------- */
 // Asychronous read
-fs.readFile('input.txt', function (err, data) {
+/*fs.readFile('input.txt', function (err, data) {
   if (err) {
     return console.log(err);
   }
   // console.log("Asynxron o`qish: " + data.toString());
 })
-
+*/
 /* -------------------------------------------- */
 // Synchronous read
-let data = fs.readFileSync('input.txt')
+// let data = fs.readFileSync('input.txt')
 // console.log("Synchronous read: " + data.toString());
 
 
@@ -416,7 +416,7 @@ const server1 = http.createServer((req, res) => {
 
 /***************************************************** */
 
-
+/*
 let rl = require('readline')
 const rline = rl.createInterface({
   input: process.stdin,
@@ -431,4 +431,25 @@ rline.question('ism: ', (ism) => {
     })
   })
 })
+*/
 // console.log(process.stdin);
+
+/*
+cluster asosan filelar bilan ma`lumot alamashish uchun ota-bola ya`ni keyingi fayllar bilan aloqa qilish.
+      ishlab turgan portlarni tekshirish, bandligini yoki online ekanligini tekshirib turuvchi module hisoblanadi.
+      asosan child_prosess ning child.fork() funksiyasidan foydalanib ishlaydi.
+      4ta methodi mavjud.
+      spawn, exec, execfile, fork
+      synxron yoki asynxron ishlatish mumkin.
+       */
+
+const cluster = require('cluster');
+if (cluster.isMaster) {
+  console.log('I am master');
+  cluster.fork();
+  cluster.fork();
+}
+else if (cluster.isWorker) {
+  console.log(`I am worker #${cluster.worker.id}`);
+}
+ 
