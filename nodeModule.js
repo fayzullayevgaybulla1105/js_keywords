@@ -294,14 +294,73 @@ const encryptMe = crypto.publicEncrypt({
   padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
   oaepHash: "sha256"
 }, Buffer.from(sec)); // shifrlashni avval ikkilik fayliga aylantirib
-console.log("Hash: ",encryptMe.toString('base64'));
+// console.log("Hash: ",encryptMe.toString('base64'));
 
 // decrypt - shifrni ochish
 
 const decryptData = crypto.privateDecrypt({
-  key:privateKey,
-  padding:crypto.constants.RSA_PKCS1_OAEP_PADDING,
-  oaepHash:"sha256"
+  key: privateKey,
+  padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+  oaepHash: "sha256"
 }, encryptMe)
 
-console.log("\nDecrypt data: ", decryptData.toString());
+// console.log("\nDecrypt data: ", decryptData.toString());
+/****************************************************** */
+
+
+/* process */
+let { arch, argv } = require('process')
+// console.log('this process architecture is ', arch);
+argv.forEach((val, index) => {
+  // console.log(`${index}: ${val}`);
+})
+/**
+  0: /usr/bin/node
+  1: /media/fayzullayev/613532c5-8a62-4643-be39-1fb78f04378c/fozil exam/nodeModule.js
+ */
+
+// console.log(process.argv[1]);   // js faylimizni joyini olib beradi
+
+// console.log(process.channel);    // Agar IPC kanali mavjud bo`lmasa bu undefined qaytaradi.
+
+let { chdir, cwd } = require('process')
+try {
+  chdir('/tmp')
+  // console.log('new directory: ', cwd());
+} catch (error) {
+  console.error('chdir :', error);
+}
+// console.log(process.config);  // configuratsiya parametrlarini qaytaradi
+// console.log(process.env);  // foydalanuvchi muhitini o`z ichiga olgan objectni qaytaradi
+// console.log(process.execPath);  // node.js faylining  haqiqiy joyini olib beradi // /usr/bin/node
+
+// console.log(process.memoryUsage());
+/*
+heapTotal va heapUsed v8 xotirasidan foydalanishni miqdori. External v8 tomonidan boshqariladigan
+  js objectlari bilan bog`langan C++ objectlarining xotiradan foydalanishini bildiradi.
+  rss - rezident to`plam hajmi - asosiy xotira qurilmasidan egallagan joy. 
+  u yigindi, kod segmenti va stekni o`z ichiga oladi
+{
+  rss: 34340864,
+  heapTotal: 5406720,
+  heapUsed: 4853192,
+  external: 479006,
+  arrayBuffers: 28867
+}
+*/
+
+/* process.nextTick() - o`zidan keyingi brlgi chiqib bo`lgandan keyingina qayta ishlaydigan funksiya */
+// console.log('start');
+process.nextTick(() => {
+  // console.log('nextTick callback');
+});
+// console.log('scheduled');
+/*
+start
+scheduled
+nextTick callback
+ */
+
+
+// console.log(process.pid);   //jarayonning PID kodini qaytaradi, bu kod unical emas
+// console.log(process.platform);    // linux
