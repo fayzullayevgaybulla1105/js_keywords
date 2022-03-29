@@ -38,10 +38,10 @@ let fs = require('fs');
 /* -------------------------------------------- */
 // Asychronous read
 fs.readFile('input.txt', function (err, data) {
-    if (err) {
-        return console.log(err);
-    }
-    // console.log("Asynxron o`qish: " + data.toString());
+  if (err) {
+    return console.log(err);
+  }
+  // console.log("Asynxron o`qish: " + data.toString());
 })
 
 /* -------------------------------------------- */
@@ -185,3 +185,95 @@ let os = require('os')
  */
 // console.log(os.platform());         // linux - Qaysi platformada ishlab turgani
 // console.log(os.release());              // 5.13.0-37-generic
+
+/****************************************************************************** */
+/* -------------- crypto ------------------------- */
+const crypto = require('crypto')
+const secret = "salim"
+const hash = crypto.createHmac('sha256', secret)
+  .update('i love you')
+  .digest('hex')
+// console.log(hash);
+
+const { getHashes } = require('crypto')
+// console.log(getHashes()); // hashlash turlari -----------
+/*
+[
+  'RSA-MD4',
+  'RSA-MD5',
+  'RSA-MDC2',
+  'RSA-RIPEMD160',
+  'RSA-SHA1',
+  'RSA-SHA1-2',
+  'RSA-SHA224',
+  'RSA-SHA256',
+  'RSA-SHA3-224',
+  'RSA-SHA3-256',
+  'RSA-SHA3-384',
+  'RSA-SHA3-512',
+  'RSA-SHA384',
+  'RSA-SHA512',
+  'RSA-SHA512/224',
+  'RSA-SHA512/256',
+  'RSA-SM3',
+  'blake2b512',
+  'blake2s256',
+  'id-rsassa-pkcs1-v1_5-with-sha3-224',
+  'id-rsassa-pkcs1-v1_5-with-sha3-256',
+  'id-rsassa-pkcs1-v1_5-with-sha3-384',
+  'id-rsassa-pkcs1-v1_5-with-sha3-512',
+  'md4',
+  'md4WithRSAEncryption',
+  'md5',
+  'md5-sha1',
+  'md5WithRSAEncryption',
+  'mdc2',
+  'mdc2WithRSA',
+  'ripemd',
+  'ripemd160',
+  'ripemd160WithRSA',
+  'rmd160',
+  'sha1',
+  'sha1WithRSAEncryption',
+  'sha224',
+  'sha224WithRSAEncryption',
+  'sha256',
+  'sha256WithRSAEncryption',
+  'sha3-224',
+  'sha3-256',
+  'sha3-384',
+  'sha3-512',
+  'sha384',
+  'sha384WithRSAEncryption',
+  'sha512',
+  'sha512-224',
+  'sha512-224WithRSAEncryption',
+  'sha512-256',
+  'sha512-256WithRSAEncryption',
+  'sha512WithRSAEncryption',
+  'shake128',
+  'shake256',
+  'sm3',
+  'sm3WithRSAEncryption',
+  'ssl3-md5',
+  'ssl3-sha1',
+  'whirlpool'
+]
+*/
+const { Buffer } = require('buffer')
+const { hkdf, hkdfSync } = require('crypto')
+
+/******** hkdf  asynchronous **************/
+/* hksf asychronous da hkdfSycn dan farqli 6- argumentida callback funksiya qabul qiladi. 
+         sha512 64bayt uzunlikdagi hashni hosil qiladi. ArrayBuffer holatida keladi
+         Buffer.from(derivedKey) buffer holatidan toStringga hex orqali o`tkazib olinadi.
+         5-argument sifatida berilgan 64 qiymat ham sha512 ning 64 baytlik hash uzunlik chegarasini belgilaydi.
+            */
+hkdf('sha512', 'key', 'salt', 'info', 64, (err, derivedKey) => {
+  if (err) throw err
+  // console.log(Buffer.from(derivedKey).toString('hex'));
+})
+
+/******** hkdfSync  synchronous **************/
+const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info',64)
+console.log(Buffer.from(derivedKey).toString('hex'));
