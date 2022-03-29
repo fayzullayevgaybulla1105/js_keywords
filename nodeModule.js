@@ -276,5 +276,32 @@ hkdf('sha512', 'key', 'salt', 'info', 64, (err, derivedKey) => {
 })
 
 /******** hkdfSync  synchronous **************/
-const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info',64)
-console.log(Buffer.from(derivedKey).toString('hex'));
+const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info', 64)
+// console.log(Buffer.from(derivedKey).toString('hex'));
+
+/**************************************** */
+/* encryt - decrypt */
+
+const sec = "Hello world"; // shifrlash uchun kalit so`z
+const { publicKey, privateKey } = crypto.generateKeyPairSync('rsa', {
+  modulusLength: 2048    // xeshning xavfsiz xesh uzunligi uchun
+})
+
+// encryption function  - shifrlash funksiyasi
+//sha256 dan foydalanib 
+const encryptMe = crypto.publicEncrypt({
+  key: publicKey,
+  padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+  oaepHash: "sha256"
+}, Buffer.from(sec)); // shifrlashni avval ikkilik fayliga aylantirib
+console.log("Hash: ",encryptMe.toString('base64'));
+
+// decrypt - shifrni ochish
+
+const decryptData = crypto.privateDecrypt({
+  key:privateKey,
+  padding:crypto.constants.RSA_PKCS1_OAEP_PADDING,
+  oaepHash:"sha256"
+}, encryptMe)
+
+console.log("\nDecrypt data: ", decryptData.toString());
