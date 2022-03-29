@@ -395,7 +395,7 @@ let userss = [
     lastname: "Doll"
   }
 ]
-let port = 2000 
+let port = 2000
 const server1 = http.createServer((req, res) => {
   if (req.url === "/") {
     res.write('Hello world!\n"/users" root');
@@ -406,10 +406,29 @@ const server1 = http.createServer((req, res) => {
     res.end()
 
   }
-  if(req.url ==="/key"){
-    res.write(path.join(__dirname,'keyword.js'))
+  if (req.url === "/key") {
+    res.write(path.join(__dirname, 'keyword.js'))
   }
 });
-server1.listen(port,()=>{
-  console.log(`http://localhost:${port}`);
-}); // server quyidagi portda ishga tushadi
+// server1.listen(port,()=>{
+//   console.log(`http://localhost:${port}`);
+// }); // server quyidagi portda ishga tushadi
+
+/***************************************************** */
+
+
+let rl = require('readline')
+const rline = rl.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+rline.question('ism: ', (ism) => {
+  rline.question('Familiya: ', (familiya) => {
+    rline.question("yosh: ", (yosh) => {
+      console.log(`\nFamiliya: ${familiya}\nIsm: ${ism}\nYosh: ${yosh}`);
+      rline.close()
+    })
+  })
+})
+// console.log(process.stdin);
