@@ -364,3 +364,52 @@ nextTick callback
 
 // console.log(process.pid);   //jarayonning PID kodini qaytaradi, bu kod unical emas
 // console.log(process.platform);    // linux
+
+/**************************************************** */
+/* http - module - http module orqali server yaratib olishimiz va unga callbackda 2ta argument berishimiz kerak.
+                  (request,response) 
+                  request - serverga kelayotgan so`rov. request.url - ya`ni userdan serverga kelayotgan so`rov manzili
+                  response - serverdan foydalanuvchiga qaytadigan javob
+                  */
+const http = require('http');
+/*const options = {
+  host: 'www.google.com',
+};
+const req = http.get(options);
+req.end();
+req.once('response', (res) => {
+  const ip = req.socket.localAddress; // req.socket.localAddress orqali kompyuterimizdagi IP adressni olishimiz mumkin
+  const port = req.socket.localPort;  // Port raqamimizni olishimiz mumkin
+  // console.log(`Your IP address is ${ip} and your source port is ${port}.`);
+  // consume response object
+});
+*/
+
+let userss = [
+  {
+    name: "Alex",
+    lastname: "Smith"
+  },
+  {
+    name: "John",
+    lastname: "Doll"
+  }
+]
+let port = 2000 
+const server1 = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.write('Hello world!\n"/users" root');
+    res.end()
+  }
+  if (req.url === '/users' && req.method === "GET") {
+    res.write(JSON.stringify(userss), 'utf-8')
+    res.end()
+
+  }
+  if(req.url ==="/key"){
+    res.write(path.join(__dirname,'keyword.js'))
+  }
+});
+server1.listen(port,()=>{
+  console.log(`http://localhost:${port}`);
+}); // server quyidagi portda ishga tushadi
